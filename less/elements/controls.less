@@ -1,23 +1,27 @@
-.controls {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	z-index: 1000;
-}
-
 .controls button {
 	padding: 5px 6px;
 	position: relative;
+	z-index: 1000;
 
 	span {
+		font-size: 20px !important;
 		top: 0;
 		left: 3px;
 	}
 }
 
+#next {
+	position: fixed;
+	right: 20px;
+	top:50%;
+	margin-top: -15px;
+}
+
 #previous {
-	position: absolute;
-	top: -40px;
+	position: fixed;
+	top: 50%;
+	left: 20px;
+	margin-top: -15px;
 }
 
 @media only screen and (max-width: 768px) {

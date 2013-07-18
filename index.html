@@ -20,8 +20,8 @@
 </head>
 <body>
 		<div class="controls">
-			<button class="btn btn-small btn-alternate" id="previous"><span class="icon" aria-hidden="true" data-icon="&#x25b4;"></span></button>
-			<button class="btn btn-small btn-alternate" id="next"><span class="icon" aria-hidden="true" data-icon="&#x25be;"></span></button>
+			<button class="btn btn-small btn-alternate" id="previous"><span class="icon" aria-hidden="true" data-icon="&#x25c3;"></span></button>
+			<button class="btn btn-small btn-alternate" id="next"><span class="icon" aria-hidden="true" data-icon="&#x25b9;"></span></button>
 		</div>
 		<article class="classic">
 			<section data-bespoke-hash="introduction">
@@ -32,8 +32,7 @@
 								<img src="img/ooomf-logo.svg">
 							</div> <!-- close .ooomf-logo -->
 						    <h2 class="alternate-text weight-bold">The Future of Work</h2>
-						    <p class="italic helper show-mobile">( You can navigate by swiping <span class="icon" aria-hidden data-icon="&#xe5b1;"></span> or <span class="icon" aria-hidden data-icon="&#xe5b0;"></span>)</p>
-						    <p class="italic helper hide-mobile">( You can navigate by pressing <span class="icon" aria-hidden data-icon="&#xe5b1;"></span> or <span class="icon" aria-hidden data-icon="&#xe5b0;"></span>)</p>
+						    <p class="italic helper show-mobile">( Navigate by swiping <span class="icon" aria-hidden data-icon="&#xe5b2;"></span> or <span class="icon" aria-hidden data-icon="&#xe5b3;"></span>)</p>
 						</div> <!-- close .centered -->
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
@@ -76,7 +75,7 @@
 			Presentation = {
 
 				ready: function () {
-					bespoke.vertical.from('article', {
+					bespoke.horizontal.from('article', {
 					  hash: true
 					});
 					Presentation.setupClickHandlers();
