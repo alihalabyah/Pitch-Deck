@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>ooomf | The Future of Work</title>
+	<script src="components/jquery/jquery.min.js"></script>
+	<script src="components/fathom/fathom.js"></script>
+	<link rel="stylesheet" href="css/presentation.css">
+</head>
+<body>
+
+	<div id="presentation">
+
+		<div class="controls">
+		<button id="previous">previous</button>
+		<button id="next">Next</button>
+	</div> <!-- close .controls -->
+
+		<div class="slide">
+		    <h1>My Presentation</h1>
+		</div>
+
+		<div class="slide">
+			<h2>My Dot Points</h2>
+			<ul>
+				<li>First dot point</li>
+				<li>Second dot point</li>
+				<li>Third dot point</li>
+			</ul>
+		</div>
+
+		<div class="slide">
+		    <h1>My Presentation</h1>
+		</div>
+
+		<div class="slide">
+			<h2>My Dot Points</h2>
+			<ul>
+				<li>First dot point</li>
+				<li>Second dot point</li>
+				<li>Third dot point</li>
+			</ul>
+		</div>
+	</div> <!-- close #presentation -->
+
+	<script>
+		(function ($) {
+
+			var fathom = new Fathom('#presentation', {
+			  onActivateSlide: function() {
+			    console.log();
+			  }
+			});
+
+			$('#previous').click(function(){
+			  fathom.prevSlide();
+			});
+
+			$('#next').click(function(){
+			  fathom.nextSlide();
+			});    
+		})(jQuery);
+	</script>
+
+</body>
+</html>
