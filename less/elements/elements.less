@@ -1,0 +1,318 @@
+// HEROS
+// for giant full-width pictures (homepage)
+
+.hero {
+  padding: 60px;
+  .box-sizing(border-box);
+  font-size: 18px;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+  color: @white;
+  background-color: @black;
+  .background-size(cover);
+  background-position: center;
+  width: 100%;
+  min-width: 1060px;
+  height: 600px;
+
+  h1 {
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 1.0em;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+.hero-home {
+  background-image: url(/img/hero-home.jpg);
+}
+
+.hero-how-it-works {
+ background-image: url(/img/hero-how-it-works.jpg);
+ height: 400px; 
+}
+
+// end HEROs
+
+// PANES
+// for marketing homepage
+.pane {
+  padding: 80px 0;
+  z-index: 5;
+  min-width: 1060px;
+
+  h2 {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  h3 {
+    font-family: "brandon-grotesque", sans-serif;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  ul {
+    li {
+      font-size: 21px;
+      font-weight: 400;
+      margin-top: 25px;
+    }
+  }
+
+  &:nth-of-type(2n) {
+    background-color: @white;
+  }
+
+  &:nth-of-type(2n+1) {
+    background-color: @whiteDark;
+  }
+}
+
+.pane-twitter {
+  background-image: url(/img/twitter-followers.jpg);
+  .background-size(cover);
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+// end PANES
+
+// CARDS
+// for showing-off portfolios (home and professionals)
+
+.card {
+  position: relative;
+
+  &:hover {
+    .portfolio-icon {
+      opacity: .8;
+    }
+  }
+  .portfolio-icon {
+    position: absolute;
+    display: block;
+    top: 55px;
+    left: 55px;
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    color: @white;
+    .border-radius(3px);
+    opacity: 0;
+    .transition(~"opacity .5s ease-in-out");
+
+    .icon {
+      font-size: 30px;
+      margin-left: 35px;
+      margin-top: 25px;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    color: @black;
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+.card-small {
+  position: relative;
+
+  &:hover {
+    .portfolio-icon {
+      opacity: .8;
+    }
+  }
+  .portfolio-icon {
+    position: absolute;
+    display: block;
+    font-size: 14px;
+    top: 55px;
+    left: 55px;
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    color: @white;
+    .border-radius(3px);
+    opacity: 0;
+    .transition(~"opacity .5s ease-in-out");
+
+    .icon {
+      font-size: 30px;
+      margin-left: 35px;
+      margin-top: 25px;
+    }
+  }
+
+  h2 {
+    font-family: @sansFontFamily;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+a.portfolio-link {
+  h2 {
+    color: @black;
+  }
+}
+
+// end CARDS
+
+// PROJECT TILES
+// used for displaying projects (projects/index, projects/manage, etc)
+
+.project-status {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  margin-left: -120px;
+  .rotate(-15deg);
+}
+
+// end PROJECT TILES
+
+// STATE TILES
+// used in the project view to show steps and completion states
+.state-tile {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  .status-icon {
+    font-size: 50px;
+    margin-right: 20px;
+  }
+}
+
+.state-tile {
+
+  &:after {
+  content: "";
+  display: inline-block;
+  background-color: @grayLight;
+  height: 30px;
+  width: 7px;
+  position: absolute;
+  bottom: -32px;
+  left: 63px;
+  }
+
+  &.not-completed {
+    opacity: .5;
+  }
+
+  &.completed:after {
+    background-color: @green;
+  }
+
+  &.not-completed:after {
+   background-color: @grayLight; 
+  }
+
+  &.active:after {
+    background-color: @orange;
+  }
+
+  &.inactive:after {
+    background-color: @grayLight;
+  }
+}
+
+.state-tile:last-of-type:after {
+  content: "";
+  height: 0;
+}
+
+// end STATE TILES
+
+// BLOCKS
+// running out of things to name things
+
+.info-block {
+  background-color: @whiteDark;
+  padding: 10px 20px;
+}
+
+// end BLOCKS
+
+// CLOSE BUTTON
+// for modals, tops of wells
+
+.close-button {
+  position: absolute;
+  right: -13px;
+  top: -13px;
+  height: 25px;
+  width: 25px;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-color: rgba(255,255,255, .8);
+  .border-radius(20px);
+  .transition(~"all 0.2s ease-in-out");
+
+  &:hover {
+    .scale(1.2);
+  }
+
+  a {
+    position: absolute;
+    right: -3px;
+    top: -5px;
+    color: @white;
+    opacity: 0.8;
+    padding: 4px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// box
+
+.box {
+  .box-sizing("border-box");
+  border: 2px solid @grayLight;
+}

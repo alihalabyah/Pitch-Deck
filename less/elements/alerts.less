@@ -1,0 +1,111 @@
+.alert {
+  padding: 15px;
+  font-size: .9em;
+  line-height: 1.3em;
+  background-color: @yellowLight;
+  border: 1px solid @yellowDark;
+  .border-radius(@baseBorderRadius);
+  
+  p {
+    margin-bottom: 0;
+  }
+}
+.alert,
+.alert h4 {
+  color: @black;
+}
+.alert h4 {
+  margin: 0;
+}
+
+a.close-alert {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  margin-top: -18px;
+  right: 10px;
+  padding: 10px;
+  color: @black;
+  opacity: .7;
+  font-size: 1.1em;
+
+  &:hover {
+    color: @yellowDark;
+    opacity: 1;
+    text-decoration: none;
+  }
+}
+
+.alert-success {
+  background-color: @greenLight;
+  border-color: @greenDark;
+  color: @greenDark;
+
+  a.close-alert {
+    color: @greenDark !important;
+
+    &:hover {
+      color: @green !important;
+    }
+  }
+}
+.alert-success h4 {
+  color: @greenDark;
+}
+
+.alert-danger,
+.alert-error {
+  background-color: @redLight;
+  border-color: @redDark;
+  color: @redDark;
+
+  a.close-alert {
+    color: @redDark !important;
+
+    &:hover {
+      color: @red !important;
+    }
+  }
+}
+.alert-danger h4,
+.alert-error h4 {
+  color: @redDark;
+}
+
+.alert-warning {
+  background-color: @orangeLight;
+  border-color: @orangeDark;
+  color: @orangeDark;
+
+  a {
+    color: darken(@orangeDark, 5%);
+  }
+
+  a.close-alert {
+    color: @orangeDark !important;
+
+    &:hover {
+      color: @orange !important;
+    }
+  }
+}
+.alert-warning h4 {
+  color: @orange;
+}
+
+.alert-info {
+  background-color: @blueLight;
+  border-color: @blueDark;
+  color: @blueDark;
+
+  a.close-alert {
+    color: @blueDark !important;
+
+    &:hover {
+      color: @blue !important;
+    }
+  }
+}
+.alert-info h4 {
+  color: @blueDark;
+}

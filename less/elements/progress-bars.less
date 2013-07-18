@@ -1,0 +1,46 @@
+// Outer container
+.progress {
+  overflow: hidden;
+  height: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
+  background-color: @grayLight;
+  .border-radius(@baseBorderRadius);
+}
+
+// Bar of progress
+.progress .bar {
+  width: 0%;
+  height: 100%;
+  color: @white;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  background-color: @gray;
+  .box-sizing(border-box);
+  .transition(width .6s ease);
+}
+
+
+// COLORS
+// ------
+
+// Danger (red)
+.progress-danger .bar, .progress .bar-danger {
+  background-color: @red;
+}
+
+// Success (green)
+.progress-success .bar, .progress .bar-success {
+  background-color: @green;
+}
+
+// Info (teal)
+.progress-info .bar, .progress .bar-info {
+  background-color: @blue;
+}
+
+// Warning (orange)
+.progress-warning .bar, .progress .bar-warning {
+  background-color: @orange;
+}

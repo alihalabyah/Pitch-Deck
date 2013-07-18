@@ -1,0 +1,23 @@
+.breadcrumb {
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+
+  > li {
+    display: inline-block;
+    .ie7-inline-block();
+
+    &.limited-width {
+      max-width: 300px;
+    }
+
+    > .divider {
+      padding: 0 5px;
+      color: @grayDark;
+    }
+  }
+  > .active {
+    color: @gray;
+  }
+}

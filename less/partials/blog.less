@@ -1,0 +1,146 @@
+.blog {
+
+  // NAVIGATION
+  // change navigation colours
+
+  .navbar-inner {
+    background-color: @seaDark;
+  }
+
+  .navbar .brand {
+    margin-top: 22px;
+    margin-left: 0;
+    background-image:url(/img/Logo/white.svg);
+  }
+
+  .navbar .nav > li > a {
+    color: #fff;
+    opacity: .8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // end NAVIGATION
+
+  // LAYOUT
+
+  #content {
+    .container {
+      width: 740px;  
+    }
+    .pane {
+      width: 100%;
+      min-width: 860px;
+    }
+  }
+
+  .page {
+    margin-top: 40px;
+  }
+
+  // POST META
+  // make the date, author, and avatar styled
+
+  .post-meta {
+    position: absolute;
+    top: 5px;
+    left: -60px;
+    
+    img {
+      float: left;
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  // END POST META
+
+  // TYPOGRAPHY
+
+  .teaser {
+    h1 {
+      font-size: 1.4em;
+      line-height: 1.3em;
+    }
+
+    h6 {
+      color: @gray;
+      font-size: 0.7em;
+    }
+
+    .img-featured {
+      width: 173px;
+      height: 173px;
+      overflow: hidden;
+
+      img {
+        max-width: none;
+        width: auto;
+        height: inherit;
+      }
+    }
+  }
+
+  .post {
+    margin-top: -50px;
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      line-height: 1.2em;
+      font-weight: 600;
+      -webkit-font-smoothing: antialiased;
+      font-family: "brandon-grotesque", sans-serif;
+    }
+
+    h2 {
+      font-family: "brandon-grotesque", sans-serif;
+      font-size: 1.6em;
+      font-weight: 600;
+      margin-top: 55px;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-family: "brandon-grotesque", sans-serif;
+      font-size: 1.3em;
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.6em;
+      margin-bottom: 1.3em;
+    }
+
+    strong {
+      font-weight: 700;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    p img {
+      text-align: center;
+      margin: auto;
+      width: 100%;
+      .border-radius(5px);
+      overflow: hidden;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    p:first-of-type img {
+      margin-top: 0;
+    }
+
+    blockquote p {
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+
+
+}

@@ -1,0 +1,56 @@
+//
+// Modals
+// --------------------------------------------------
+
+// Background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindexModalBackdrop;
+  background-color: rgba(0,0,0, .7);
+  // Fade for backdrop
+  &.fade { opacity: 0; }
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  .opacity(80);
+}
+
+// Base modal
+.modal {
+  position: relative;
+  top: 100px;
+  left: 50%;
+  z-index: @zindexModal;
+  width: 760px;
+  margin-left: -380px;
+  background-color: @white;
+  border: 1px solid rgba(0,0,0,.3);
+  .background-clip(padding-box);
+  outline: none;
+
+  .close-button {
+    position: absolute;
+    color: @white;
+    height: 30px;
+    width: 30px;
+
+    span {
+      position: absolute;
+      right: -3px;
+      top: 1px;
+      color: @white;
+      padding: 4px;
+    }
+  }
+
+  &.fade {
+    .transition(e('opacity .3s linear, top .3s ease-out'));
+    top: -25%;
+  }
+  &.fade.in { top: 10%; }
+}

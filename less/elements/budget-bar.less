@@ -1,0 +1,25 @@
+// Outer container
+.budget {
+  overflow: hidden;
+  height: 10px;
+  background-color: @bodyBackground;
+}
+
+// Bar of budget
+.budget .bar {
+  width: 0%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  background-color: @gray3;
+  .box-sizing(border-box);
+  .transition(width .6s ease);
+}
+
+.budget .bar-low, .budget .bar-high {
+  background-color: @gray3;
+}
+
+.budget .bar-mid {
+  background-color: @green;
+}

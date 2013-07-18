@@ -1,0 +1,88 @@
+#footer {
+    background-color: @seaDark;
+    height: @footerHeight;
+    width: 100%;
+    bottom:0;
+    position: absolute;
+    min-width: 1060px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+
+    .container {
+      position: relative;
+    }
+
+    .footer-map {
+      background-image: url(/img/map.png);
+      background-size-y: 100%;
+      background-repeat: no-repeat;
+      height: @footerHeight;
+      width: 100%;
+      position: absolute;
+      left: -300px;
+      z-index: 0;
+
+      .locator {
+        position: absolute;
+        top: 150px;
+        left: 460px;
+        background-image: url(/img/map-locator@2x.png);
+        background-repeat: no-repeat;
+        .background-size(cover);
+        width: 134px;
+        height: 135px;
+      }
+
+      img {
+        // position the map-marker
+        position: absolute;
+        top: 208px;
+        left: 519px;
+      }
+    }
+
+    .footer-columns {
+      position: relative;
+      margin-top: 52px;
+      width: 580px;
+      z-index: 20;
+    }
+
+    h6, .made-in {
+      font-family: "brandon-grotesque", sans-serif;
+      color: #6B87A0;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    p {
+        font-weight: 400;
+        color: #fff;
+        opacity: .5;
+    }
+
+    ul {
+      li {
+        margin-bottom: 15px;
+      }
+    }
+
+    address {
+      display: none;
+    }
+}
+
+// force the footer to the bottom
+#wrapper {
+   min-height:100%;
+   position:relative;
+}
+
+#content {
+   padding-bottom: @footerHeight;
+}

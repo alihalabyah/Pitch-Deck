@@ -1,0 +1,157 @@
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid #c4c4c4;
+}
+
+.inner-well {
+  padding: 40px;
+}
+
+.well-header {
+  font-size: 16px;
+  font-weight: bold;
+  color: @black;
+  background-color: @gray;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 15px 20px;
+    margin: 0;
+    margin-top: 1px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 15px 20px;
+    margin: 0;
+  }
+
+  .btn {
+    margin-top: 8px;
+    margin-right: 15px;
+  }
+
+  .btn-small {
+    margin-top: 11px;
+  }
+
+  .icon {
+    vertical-align: 0px;
+  }
+
+  .icon.make-icon-bigger {
+    margin-top: -3px;
+    margin-right: 8px;
+  }
+}
+
+.well-header-info {
+  background-color: @grayLight;
+}
+
+.well-header-light {
+  background-color: #eee;
+}
+
+.well-header-danger {
+    background-color: lighten(@red, 10%);
+    color: white;
+}
+
+.well-header-success {
+    background-color: @green;
+    color: white;
+}
+
+.well-header-warning {
+  background-color: @orange;
+  color: white;
+}
+
+.well-header-transparent {
+    background-color: transparent;
+}
+
+.well-footer {
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.2em;
+  font-weight: bold;
+  color: @black;
+  background-color: @grayLight;
+
+  h1, h2, h3, h4, h5, h6, p {
+    font-size: 16px;
+    line-height: 1.2em;
+    margin: 0;
+    margin-top: 7px;
+  }
+}
+
+.well-footer-light {
+  background-color: @grayLighter;
+}
+
+.well-footer-small {
+  padding: 10px 20px;
+
+  h1, h2, h3, h4, h5, h6, p {
+    font-size: 14px;
+    line-height: 1.0em;
+    padding: 0;
+    margin: 0;
+    margin-top: 7px;
+  }
+}
+
+.well-footer-warning {
+  background-color: @orange;
+}
+
+.well-header-email {
+  height: 25px;
+  .background-size(125px, 25px);
+    background-color: @white;
+    .background-image(~"linear-gradient(45deg, @{red} 20%, transparent 20%, transparent 40%, @{blue} 40%, @{blue} 60%, transparent 60%, transparent 80%, @{red} 80%)");
+}
+
+.head-icon {
+	margin-top: -100px;
+}
+
+.head-container {
+	margin-bottom: -40px;
+}
+
+// WELL OVERLAYS
+// used on homepage
+
+.well-overlay {
+  background-color: #000;
+  background-color: rgba(0,0,0,.8);
+  border-bottom-color: #000;
+
+  label, p {
+    color: #fff;
+    color: rgba(255,255,255,.8);
+  }
+
+  .input-prepend .add-on,
+  .input-append .add-on {
+    color: @black;
+  }
+
+}
+
+

@@ -1,0 +1,33 @@
+//
+// Layouts
+// --------------------------------------------------
+
+
+// Container (centered, fixed-width layouts)
+.container {
+  .container-fixed();
+}
+
+// Fluid layouts (left aligned, with sidebar, min- & max-width content)
+.container-fluid {
+  padding-right: @gridGutterWidth;
+  padding-left: @gridGutterWidth;
+  .clearfix();
+}
+
+.page {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+// vertically center a div using table-wrapper and cell-wrapper
+.table-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.cell-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
