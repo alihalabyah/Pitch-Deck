@@ -19,24 +19,47 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+		<div class="controls">
+			<button class="btn btn-small btn-alternate" id="previous"><span class="icon" aria-hidden="true" data-icon="&#x25b4;"></span></button>
+			<button class="btn btn-small btn-alternate" id="next"><span class="icon" aria-hidden="true" data-icon="&#x25be;"></span></button>
+		</div>
 		<article class="classic">
-			<section class="slide slide--introduction" data-bespoke-hash="introduction">
+			<section data-bespoke-hash="introduction">
 			  	<div class="table-wrapper">
 					<div class="cell-wrapper">
 						<div class="centered">
 							<div class="ooomf-logo">
 								<img src="img/ooomf-logo.svg">
 							</div> <!-- close .ooomf-logo -->
-						    <h2 class="slide__alternate-text weight-bold">The Future of Work</h2>
-						    <button class="btn btn-danger" id="start">Start</button>
+						    <h2 class="alternate-text weight-bold">The Future of Work</h2>
+						    <p class="italic helper show-mobile">( You can navigate by swiping <span class="icon" aria-hidden data-icon="&#xe5b1;"></span> or <span class="icon" aria-hidden data-icon="&#xe5b0;"></span>)</p>
+						    <p class="italic helper hide-mobile">( You can navigate by pressing <span class="icon" aria-hidden data-icon="&#xe5b1;"></span> or <span class="icon" aria-hidden data-icon="&#xe5b0;"></span>)</p>
 						</div> <!-- close .centered -->
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
 			</section>
-			<section class="slide" data-bespoke-hash="shameless-plug"></section>
-			<section class="slide" data-bespoke-hash="controversial-statement"></section>
-			<section class="slide" data-bespoke-hash="explanation-of-controversial-statement"></section>
-			<section class="slide" data-bespoke-hash="shameless-self-promotion"></section>
+			<section data-bespoke-hash="the-shift">
+				<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<h3 class="heading uppercase">The Shift</h1>
+						<p>There will be <a href="#">more independent workers</a> by 2020 than full-time employees.</p>
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
+			<section data-bespoke-hash="the-shift-2">
+				<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<p>(graph)</p>
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
+			<section data-bespoke-hash="economic-movement">
+				<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<p>The most significant <span class="alternate-text">economic movement</span> since the Industrial Revolution.</p>
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
 		</article>
 
 	<script>
@@ -46,7 +69,8 @@
 
 			cache = {
 				presentationContainer: $('#presentation'),
-				startButton: $('#start'),
+				nextButton: $('#next'),
+				previousButton: $('#previous')
 			};
 
 			Presentation = {
@@ -59,8 +83,12 @@
 				},
 
 				setupClickHandlers: function () {
-					cache.startButton.click(function () {
-						bespoke.slide(1);
+					cache.nextButton.click(function () {
+						bespoke.next();
+					});
+
+					cache.previousButton.click(function () {
+						bespoke.prev();
 					});
 				}
 			};

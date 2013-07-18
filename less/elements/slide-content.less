@@ -1,0 +1,104 @@
+// ==========================================================================
+// * General slide styles
+// ==========================================================================
+
+.alternate-text {
+	color: @blue;
+}
+.classic {
+	h3 {
+		font-size: 25px;
+		line-height: 120%;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: 30px;
+		line-height: 180%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.classic {
+		h3 {
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+// ==========================================================================
+// * First slide: Introduction
+// ==========================================================================
+
+.ooomf-logo {
+	width: 300px;
+	margin: auto;
+
+	img {
+		width: 100%;
+	}
+}
+
+h2 {
+	font-size: 30px;
+}
+
+[data-bespoke-hash="introduction"] {
+	background-image: url(../img/map2.png);
+	.background-size(cover);
+	background-position: center;
+}
+
+.helper {
+	margin-top: 0;
+	font-size: 14px !important;
+	font-style: italic;
+	opacity: .4;
+}
+
+// iPad
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+// iPhone
+@media only screen and (max-width: 480px) {
+	.ooomf-logo {
+		width: 100px;
+	}
+}
+
+
+
+// ==========================================================================
+// * Second slide: The shift
+// ==========================================================================
+
+
+[data-bespoke-hash="the-shift"] {
+	background-image: url(../img/hipster.png);
+	.background-size(cover);
+	background-position: center;
+}
+
+// ==========================================================================
+// * Third slide: The shift 2
+// ==========================================================================
+
+// graph stuff
+
+// ==========================================================================
+// * Second slide: The shift
+// ==========================================================================
+
+
+[data-bespoke-hash="economic-movement"] {
+	background-image: url(../img/industrial.png);
+	.background-size(cover);
+	background-position: center;
+}

@@ -1,0 +1,27 @@
+.controls {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1000;
+}
+
+.controls button {
+	padding: 5px 6px;
+	position: relative;
+
+	span {
+		top: 0;
+		left: 3px;
+	}
+}
+
+#previous {
+	position: absolute;
+	top: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+	.controls {
+		display: none;
+	}
+}

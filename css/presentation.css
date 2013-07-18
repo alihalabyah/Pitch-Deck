@@ -3758,24 +3758,6 @@ a.portfolio-link h2 {
   box-sizing: "border-box";
   border: 2px solid #cfd4d9;
 }
-.slide--introduction {
-  background-image: url(../img/map2.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-.slide--introduction .ooomf-logo {
-  width: 300px;
-  margin: auto;
-}
-.slide--introduction .ooomf-logo img {
-  width: 100%;
-}
-.slide__alternate-text {
-  color: #48b0e7;
-}
 article {
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
@@ -3788,6 +3770,7 @@ article {
   right: 0;
   left: 0;
   bottom: 0;
+  overflow: hidden;
 }
 section {
   -webkit-transform: none;
@@ -3800,12 +3783,10 @@ section {
   height: 100%;
   position: absolute;
   opacity: 0;
-  overflow: hidden;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 100px;
-  padding-right: 150px;
   color: #ffffff;
   -webkit-border-radius: 3px;
   -webkit-background-clip: padding-box;
@@ -3880,4 +3861,101 @@ section.bespoke-inactive {
   -ms-transform: translate3d(0, 640px, 0);
   transform: translate3d(0, 640px, 0);
   opacity: 0.3;
+}
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 20px;
+  }
+}
+.alternate-text {
+  color: #48b0e7;
+}
+.classic h3 {
+  font-size: 25px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+.classic p {
+  font-size: 30px;
+  line-height: 180%;
+}
+@media only screen and (max-width: 480px) {
+  .classic h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .classic p {
+    font-size: 18px;
+  }
+}
+.ooomf-logo {
+  width: 300px;
+  margin: auto;
+}
+.ooomf-logo img {
+  width: 100%;
+}
+h2 {
+  font-size: 30px;
+}
+[data-bespoke-hash="introduction"] {
+  background-image: url(../img/map2.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.helper {
+  margin-top: 0;
+  font-size: 14px !important;
+  font-style: italic;
+  opacity: .4;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  
+}
+@media only screen and (max-width: 480px) {
+  .ooomf-logo {
+    width: 100px;
+  }
+}
+[data-bespoke-hash="the-shift"] {
+  background-image: url(../img/hipster.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="economic-movement"] {
+  background-image: url(../img/industrial.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.controls button {
+  padding: 5px 6px;
+  position: relative;
+}
+.controls button span {
+  top: 0;
+  left: 3px;
+}
+#previous {
+  position: absolute;
+  top: -40px;
+}
+@media only screen and (max-width: 768px) {
+  .controls {
+    display: none;
+  }
 }
