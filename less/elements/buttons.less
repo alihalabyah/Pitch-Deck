@@ -55,6 +55,26 @@
   }
 }
 
+// bordered button
+
+.btn.btn-alternate {
+  background-color: transparent;
+  border: 3px solid @white;
+  opacity: .2;
+  .transition(~"opacity 300 ease-in-out");
+
+  &:hover {
+    background-color: transparent !important;
+    opacity: .8;  
+  }
+
+  &:active {
+    opacity: 1;
+    color: @blue;
+    border-color: @blue;
+  }
+}
+
 
 
 // Button Sizes (reg (btn), small, & mini)

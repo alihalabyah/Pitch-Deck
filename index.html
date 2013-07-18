@@ -1,61 +1,71 @@
 <html>
 <head>
 	<title>ooomf | The Future of Work</title>
-	<script src="components/jquery/jquery.min.js"></script>
-	<script src="components/fathom/fathom.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- stylesheets -->
 	<link rel="stylesheet" href="css/presentation.css">
+
+	<!-- javascript -->
+	<script src="components/jquery/jquery.min.js"></script>
+	<script src="components/bespoke.js/dist/bespoke.min.js"></script>
+	<script src="components/bespoke-hash/dist/bespoke-hash.min.js"></script>
+
+	<!-- webfonts -->
+	<link href="css/webfonts/webfont-icons.css" rel="stylesheet">
+	<!--[if lte IE 7]><script src="css/webfonts/lte-ie7.js"></script><![endif]-->
+	<script type="text/javascript" src="//use.typekit.net/ewu3gkp.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-
-	<div id="presentation">
-
-		<div class="controls">
-			<button id="next" class="btn btn-inverse">Next</button>
-		</div> <!-- close .controls -->
-
-		<div class="slide slide--introduction">
-		    <h2>The Future of Work</h2>
-		</div>
-
-		<div class="slide">
-			<h2>My Dot Points</h2>
-			<ul>
-				<li>First dot point</li>
-				<li>Second dot point</li>
-				<li>Third dot point</li>
-			</ul>
-		</div>
-
-		<div class="slide">
-		    <h1>My Presentation</h1>
-		</div>
-
-		<div class="slide">
-			<h2>My Dot Points</h2>
-			<ul>
-				<li>First dot point</li>
-				<li>Second dot point</li>
-				<li>Third dot point</li>
-			</ul>
-		</div>
-	</div> <!-- close #presentation -->
+		<article class="classic">
+			<section class="slide slide--introduction" data-bespoke-hash="introduction">
+			  	<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<div class="centered">
+							<div class="ooomf-logo">
+								<img src="img/ooomf-logo.svg">
+							</div> <!-- close .ooomf-logo -->
+						    <h2 class="slide__alternate-text weight-bold">The Future of Work</h2>
+						    <button class="btn btn-danger" id="start">Start</button>
+						</div> <!-- close .centered -->
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
+			<section class="slide" data-bespoke-hash="shameless-plug"></section>
+			<section class="slide" data-bespoke-hash="controversial-statement"></section>
+			<section class="slide" data-bespoke-hash="explanation-of-controversial-statement"></section>
+			<section class="slide" data-bespoke-hash="shameless-self-promotion"></section>
+		</article>
 
 	<script>
 		(function ($) {
+			var Presentation,
+				cache;
 
-			var fathom = new Fathom('#presentation', {
-			  onActivateSlide: function() {
-			    console.log();
-			  }
-			});
+			cache = {
+				presentationContainer: $('#presentation'),
+				startButton: $('#start'),
+			};
 
-			$('#previous').click(function(){
-			  fathom.prevSlide();
-			});
+			Presentation = {
 
-			$('#next').click(function(){
-			  fathom.nextSlide();
-			});    
+				ready: function () {
+					bespoke.vertical.from('article', {
+					  hash: true
+					});
+					Presentation.setupClickHandlers();
+				},
+
+				setupClickHandlers: function () {
+					cache.startButton.click(function () {
+						bespoke.slide(1);
+					});
+				}
+			};
+
+			Presentation.ready();
 		})(jQuery);
 	</script>
 

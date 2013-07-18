@@ -1,12 +1,96 @@
-.slide {
-	width: 100%;
-	height: 100%;
-	.box-sizing(border-box);
-	background-color: @seaDark;
-	.background-size(cover);
-	background-position: center;
-}
-
 .slide--introduction {
 	background-image: url(../img/map2.png);
+	.background-size(cover);
+	background-position: center;
+
+	.ooomf-logo {
+		width: 300px;
+		margin: auto;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.slide__alternate-text {
+	color: @blue;
+}
+
+article {
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	-ms-perspective: 600px;
+	-o-perspective: 600px;
+	perspective: 600px;
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+section {
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+	background: @slideBackgroundColor;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	.box-sizing(border-box);
+	padding: 100px;
+	padding-right: 150px;
+	color: @white;
+	.border-radius(3px);
+}
+
+body,
+section.bespoke-slide {
+	.transition(~"all .7s ease");
+}
+
+section.bespoke-active {
+	opacity: 1;
+	z-index: 1;
+}
+
+section.bespoke-inactive {
+	pointer-events: none;
+}
+
+
+.classic {
+	background: #000;
+}
+
+.classic section {
+	background-color: @slideBackgroundColor;
+
+	&.bespoke-before {
+	.transform(~"translate3d(0, -1920px, 0)");
+	}
+	&.bespoke-before-2 {
+		.transform(~"translate3d(0, -1280px, 0)");
+		opacity: 0.1;
+	}
+	&.bespoke-before-1 {
+		.transform(~"translate3d(0, -640px, 0)");
+		opacity: 0.3;
+	}
+	&.bespoke-after {
+		.transform(~"translate3d(0, 1920px, 0)");
+	}
+	&.bespoke-after-2 {
+		.transform(~"translate3d(0, 1280px, 0)");
+		opacity: 0.1;
+	}
+	&.bespoke-after-1 {
+		.transform(~"translate3d(0, 640px, 0)");
+		opacity: 0.3;
+	}
 }
