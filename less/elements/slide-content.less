@@ -18,6 +18,23 @@
 	}
 }
 
+.emphasis {
+	color: @blue;
+	font-weight: 600;
+	font-size: 55px;
+}
+
+.split-3 {
+	width: 30%;
+	margin-right: 5%;
+	float: left;
+	.box-sizing(border-box);
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
 @media only screen and (max-width: 480px) {
 	.classic {
 		h3 {
@@ -93,12 +110,22 @@ h2 {
 // graph stuff
 
 // ==========================================================================
-// * Second slide: The shift
+// * Fourth slide: Economic Movement
 // ==========================================================================
 
 
 [data-bespoke-hash="economic-movement"] {
 	background-image: url(../img/industrial.png);
+	.background-size(cover);
+	background-position: center;
+}
+
+// ==========================================================================
+// *  slide: Noise
+// ==========================================================================
+
+[data-bespoke-hash="noise"] {
+	background-image: url(../img/noise.png);
 	.background-size(cover);
 	background-position: center;
 }

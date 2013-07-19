@@ -59,6 +59,75 @@
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
 			</section>
+			<section data-bespoke-hash="why">
+				<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<h3 class="heading uppercase">Why?</h1>
+						<ul class="unstyled">
+							<li><p><span class="icon alternate-text" aria-hidden="true" data-icon="&#xe5b1;"></span> Decreased overhead</p></li>
+							<li><p><span class="icon alternate-text" aria-hidden="true" data-icon="&#xe5b0;"></span> Improved work quality</p></li>
+							<li><p><span class="icon alternate-text" aria-hidden="true" data-icon="&#xe5a0;"></span> More flexibility</p></li>
+						</ul> <!-- close .unstyled -->
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
+			<section data-bespoke-hash="startups-will-contract">
+				<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<p>Startups alone will contract <br>
+							<span class="emphasis">$1 Billion</span> <br>
+						in projects this year.</p>
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
+			<section data-bespoke-hash="current-solutions-broken">
+				<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<h3 class="heading uppercase">Current solutions broken</h1>
+						<div class="row-fluid">
+							<div class="split-3">
+								<div class="centered">
+									<p class="weight-bold">Job Boards</p>
+									<p class="weight-regular"><em>Untargeted</em></p>
+									<img src="img/job-board.png">
+								</div> <!-- close .centered -->
+							</div> <!-- close .split-3 -->
+							<div class="split-3">
+								<div class="centered">
+									<p class="weight-bold">Recruiters</p>
+									<p class="weight-regular"><em>Spam</em></p>
+									<img src="img/spam.png">
+								</div> <!-- close .centered -->
+							</div> <!-- close .split-3 -->
+							<div class="split-3">
+								<div class="centered">
+									<p class="weight-bold">Bidding</p>
+									<p class="weight-regular"><em>Price war</em></p>
+									<img src="img/bidding.png">
+								</div> <!-- close .centered -->
+							</div> <!-- close .split-3 -->
+						</div> <!-- close .row-fluid -->
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
+			<section data-bespoke-hash="noise">
+				<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<p>more independent professionals <span class="alternate-text">=</span> more disconnected</p>
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
+
+			<section data-bespoke-hash="ooomf">
+				<div class="table-wrapper">
+					<div class="cell-wrapper">
+						<div class="centered">
+							<p class="alternate-text weight-bold">ooomf</p>
+							<p>A platform that connects quality projects with only the best independent professionals.</p>
+						</div> <!-- close .centered -->
+					</div> <!-- close .cell-wrapper -->
+				</div> <!-- close .table-wrapper -->
+			</section>
 		</article>
 
 	<script>
@@ -71,7 +140,8 @@
 				nextButton: $('#next'),
 				previousButton: $('#previous'),
 				controlsContainer: $('.controls'),
-				startButton: $('#start')
+				startButton: $('#start'),
+				lastSlideIndex: $('section').length - 1,
 			};
 
 			Presentation = {
@@ -97,9 +167,12 @@
 				setupListeners: function () {
 					bespoke.on('activate', function (event) {
 						if (event.index === 0) {
-							cache.previousButton.hide();
+							cache.previousButton.fadeOut();
+						} else if (event.index === cache.lastSlideIndex) {
+							cache.nextButton.fadeOut();
 						} else {
-							cache.previousButton.show();
+							cache.previousButton.fadeIn();
+							cache.nextButton.fadeIn();
 						}
 					});
 				}

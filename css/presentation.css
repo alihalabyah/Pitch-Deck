@@ -3925,6 +3925,22 @@ section.bespoke-inactive {
   font-size: 30px;
   line-height: 180%;
 }
+.emphasis {
+  color: #48b0e7;
+  font-weight: 600;
+  font-size: 55px;
+}
+.split-3 {
+  width: 30%;
+  margin-right: 5%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.split-3:last-of-type {
+  margin-right: 0;
+}
 @media only screen and (max-width: 480px) {
   .classic h3 {
     font-size: 14px;
@@ -3982,6 +3998,14 @@ h2 {
   background-size: cover;
   background-position: center;
 }
+[data-bespoke-hash="noise"] {
+  background-image: url(../img/noise.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
 .controls button {
   padding: 5px 6px;
   position: relative;
@@ -4001,13 +4025,13 @@ h2 {
   position: fixed;
   right: 20px;
   top: 50%;
-  margin-top: -15px;
+  margin-top: -25px;
 }
 #previous {
   position: fixed;
   top: 50%;
   left: 20px;
-  margin-top: -15px;
+  margin-top: -25px;
 }
 @media only screen and (max-width: 768px) {
   .controls {
