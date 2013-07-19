@@ -20,8 +20,8 @@
 </head>
 <body>
 		<div class="controls">
-			<button class="btn btn-small btn-alternate" id="previous"><span class="icon" aria-hidden="true" data-icon="&#x25c3;"></span></button>
-			<button class="btn btn-small btn-alternate" id="next"><span class="icon" aria-hidden="true" data-icon="&#x25b9;"></span></button>
+			<button id="previous"><span aria-hidden="true" data-icon="&#xe5d2;"></span></button>
+			<button id="next"><span aria-hidden="true" data-icon="&#xe5d3;"></span></button>
 		</div>
 		<article class="classic">
 			<section data-bespoke-hash="introduction">
@@ -69,7 +69,9 @@
 			cache = {
 				presentationContainer: $('#presentation'),
 				nextButton: $('#next'),
-				previousButton: $('#previous')
+				previousButton: $('#previous'),
+				controlsContainer: $('.controls'),
+				startButton: $('#start')
 			};
 
 			Presentation = {
@@ -79,6 +81,7 @@
 					  hash: true
 					});
 					Presentation.setupClickHandlers();
+					Presentation.setupListeners();
 				},
 
 				setupClickHandlers: function () {
@@ -88,6 +91,16 @@
 
 					cache.previousButton.click(function () {
 						bespoke.prev();
+					});
+				},
+
+				setupListeners: function () {
+					bespoke.on('activate', function (event) {
+						if (event.index === 0) {
+							cache.previousButton.hide();
+						} else {
+							cache.previousButton.show();
+						}
 					});
 				}
 			};

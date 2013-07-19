@@ -3986,11 +3986,16 @@ h2 {
   padding: 5px 6px;
   position: relative;
   z-index: 1000;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  opacity: .4;
+}
+.controls button:hover {
+  opacity: .8;
 }
 .controls button span {
-  font-size: 20px !important;
-  top: 0;
-  left: 3px;
+  font-size: 30px !important;
 }
 #next {
   position: fixed;
@@ -4006,6 +4011,9 @@ h2 {
 }
 @media only screen and (max-width: 768px) {
   .controls {
+    display: none;
+  }
+  #start {
     display: none;
   }
 }
