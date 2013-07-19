@@ -4061,6 +4061,28 @@ h2 {
   background-size: cover;
   background-position: center;
 }
+[data-bespoke-hash="match-rate"] {
+  text-align: right;
+}
+[data-bespoke-hash="meet-milan"] {
+  background-image: url(../img/milan.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.image-row {
+  width: 600px;
+}
+.image-row img {
+  width: 20%;
+  margin-right: 4%;
+}
+.image-row .apple {
+  width: 10%;
+}
 .controls button {
   padding: 5px 6px;
   position: relative;
