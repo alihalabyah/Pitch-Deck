@@ -3998,8 +3998,63 @@ h2 {
   background-size: cover;
   background-position: center;
 }
+[data-bespoke-hash="why-1"] {
+  background-image: url(../img/map2.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
 [data-bespoke-hash="noise"] {
   background-image: url(../img/noise.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="mobile-and-web-talent"] {
+  background-image: url(../img/collab2.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="meet-jeff"] img {
+  width: 200px;
+  margin-bottom: 30px;
+}
+[data-bespoke-hash="meet-jeff"] p {
+  line-height: 140%;
+}
+[data-bespoke-hash="pitch-your-inspiration-1"] {
+  background-image: url(../img/estimate-1@2x.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="pitch-your-inspiration-2"] {
+  background-image: url(../img/estimate-2@2x.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="pitch-your-inspiration-3"] {
+  background-image: url(../img/estimate-3@2x.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="pros-come-to-you"] {
+  background-image: url(../img/profile@2x.png);
   -o-background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -4031,13 +4086,10 @@ h2 {
   position: fixed;
   top: 50%;
   left: 20px;
-  margin-top: -25px;
+  margin-top: -30px;
 }
 @media only screen and (max-width: 768px) {
   .controls {
-    display: none;
-  }
-  #start {
     display: none;
   }
 }
