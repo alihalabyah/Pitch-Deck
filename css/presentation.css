@@ -4083,6 +4083,38 @@ h2 {
 .image-row .apple {
   width: 10%;
 }
+[data-bespoke-hash="headed"] {
+  background-image: url(../img/headed.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="vision"] {
+  background-image: url(../img/map2.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="fortune-500"] {
+  background-image: url(../img/city.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="revolution"] {
+  background-image: url(../img/seth.png);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
 .controls button {
   padding: 5px 6px;
   position: relative;
