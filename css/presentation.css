@@ -4083,14 +4083,6 @@ h2 {
 .image-row .apple {
   width: 10%;
 }
-[data-bespoke-hash="headed"] {
-  background-image: url(../img/headed.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
 [data-bespoke-hash="vision"] {
   background-image: url(../img/map2.png);
   -o-background-size: cover;
@@ -4114,6 +4106,19 @@ h2 {
   -moz-background-size: cover;
   background-size: cover;
   background-position: center;
+}
+.graph-1 {
+  width: 80%;
+  margin: auto;
+}
+.graph-2 {
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.graph-3 {
+  width: 95%;
+  margin: auto;
 }
 .controls button {
   padding: 5px 6px;
