@@ -8,9 +8,7 @@
 	<link rel="stylesheet" href="css/presentation.css">
 
 	<!-- javascript -->
-	<script src="components/jquery/jquery.min.js"></script>
-	<script src="components/bespoke.js/dist/bespoke.min.js"></script>
-	<script src="components/bespoke-hash/dist/bespoke-hash.min.js"></script>
+	<script src="js/dist/build.min.js"></script>
 
 	<!-- webfonts -->
 	<link href="css/webfonts/webfont-icons.css" rel="stylesheet">
@@ -32,7 +30,7 @@
 								<img src="img/ooomf-logo.svg">
 							</div> <!-- close .ooomf-logo -->
 						    <h2 class="alternate-text weight-bold">The Future of Work</h2>
-						    <p class="italic helper show-mobile">( Navigate by swiping <span class="icon" aria-hidden data-icon="&#xe5b2;"></span> or <span class="icon" aria-hidden data-icon="&#xe5b3;"></span>)</p>
+						    <p class="italic helper show-mobile">Swipe to start <span class="icon" aria-hidden data-icon="&#xe5b3;"></span></p>
 						</div> <!-- close .centered -->
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
@@ -97,27 +95,35 @@
 				<div class="table-wrapper">
 					<div class="cell-wrapper">
 						<h3 class="heading uppercase">Current solutions broken</h3>
-						<div class="row-fluid">
+						<div class="row-fluid clearfix">
 							<div class="split-3">
 								<div class="centered">
 									<p class="weight-bold">Job Boards</p>
 									<p class="weight-regular"><em>Untargeted</em></p>
-									<img src="img/job-board.png">
 								</div> <!-- close .centered -->
 							</div> <!-- close .split-3 -->
 							<div class="split-3">
 								<div class="centered">
 									<p class="weight-bold">Recruiters</p>
 									<p class="weight-regular"><em>Spam</em></p>
-									<img src="img/spam.png">
 								</div> <!-- close .centered -->
 							</div> <!-- close .split-3 -->
 							<div class="split-3">
 								<div class="centered">
 									<p class="weight-bold">Bidding</p>
 									<p class="weight-regular"><em>Price war</em></p>
-									<img src="img/bidding.png">
 								</div> <!-- close .centered -->
+							</div> <!-- close .split-3 -->
+						</div> <!-- close .row-fluid -->
+						<div class="row-fluid">
+							<div class="split-3">
+								<img src="img/job-board.png">
+							</div> <!-- close .split-3 -->
+							<div class="split-3">
+								<img src="img/spam.png">
+							</div> <!-- close .split-3 -->
+							<div class="split-3">
+								<img src="img/bidding.png">
 							</div> <!-- close .split-3 -->
 						</div> <!-- close .row-fluid -->
 					</div> <!-- close .cell-wrapper -->
@@ -167,7 +173,7 @@
 			<section data-bespoke-hash="pitch-your-inspiration-1">
 				<div class="table-wrapper">
 					<div class="cell-wrapper">
-						<h3 class="heading uppercase"><span class="alternate-text">1.</span> Pitch your inspiration</h3>
+						<h3 class="heading uppercase"><span class="alternate-text">1.</span> Jeff pitches his inspiration</h3>
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
 			</section>
@@ -175,7 +181,7 @@
 			<section data-bespoke-hash="pitch-your-inspiration-2">
 				<div class="table-wrapper">
 					<div class="cell-wrapper">
-						<h3 class="heading uppercase"><span class="alternate-text">1.</span> Pitch your inspiration</h3>
+						<h3 class="heading uppercase"><span class="alternate-text">2.</span> Jeff chooses his features and styles</h3>
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
 			</section>
@@ -183,7 +189,7 @@
 			<section data-bespoke-hash="pitch-your-inspiration-3">
 				<div class="table-wrapper">
 					<div class="cell-wrapper">
-						<h3 class="heading uppercase"><span class="alternate-text">1.</span> Pitch your inspiration</h3>
+						<h3 class="heading uppercase"><span class="alternate-text">3.</span> Jeff gets an automatic project estimate</h3>
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
 			</section>
@@ -191,7 +197,7 @@
 			<section data-bespoke-hash="pros-come-to-you">
 				<div class="table-wrapper">
 					<div class="cell-wrapper">
-						<h3 class="heading uppercase"><span class="alternate-text">2.</span> The best pro comes to you</h3>
+						<h3 class="heading uppercase"><span class="alternate-text">4.</span> The best pro comes directly to Jeff</h3>
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
 			</section>
@@ -209,7 +215,7 @@
 			<section data-bespoke-hash="we-handle">
 				<div class="table-wrapper">
 					<div class="cell-wrapper">
-						<h3 class="uppercase heading"><span class="alternate-text">3.</span> We handle</h3>
+						<h3 class="uppercase heading"><span class="alternate-text">5.</span> We handle</h3>
 						<ul class="unstyled">
 							<li><p><span class="icon alternate-text" aria-hidden="true" data-icon="&#xe4c3;"></span> payments</p></li>
 							<li><p><span class="icon alternate-text" aria-hidden="true" data-icon="&#xe526;"></span> legal</p></li>
@@ -254,11 +260,8 @@
 						<div class="graph-2">
 							<img src="img/graph2.svg">
 						</div> <!-- close .graph-2 -->
-						<div class="image-row">
-							<img src="img/apple.png" class="apple">
-							<img src="img/path.png" class="path">
-							<img src="img/mailbox.png" class="mailbox">
-							<img src="img/google.png" class="google">
+						<div class="companies">
+							<img src="img/companies-using-ooomf.png" alt="Companies using ooomf: Path, Apple, Google, and Mailbox">
 						</div> <!-- close .image-row -->
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
@@ -411,7 +414,7 @@
 			<section data-bespoke-hash="raising">
 				<div class="table-wrapper">
 					<div class="cell-wrapper">
-						<h3 class="uppercase heading">$1MM</h3>
+						<h3 class="uppercase heading">Raising $1MM</h3>
 						<ul class="unstyled">
 							<li><p><span class="icon alternate-text" aria-hidden="true" data-icon="&#xe5b0;"></span> Grow product and sales team</p></li>
 							<li><p><span class="icon alternate-text" aria-hidden="true" data-icon="&#xe5a2;"></span> Fuel marketing and customer acquisition</p></li>
@@ -433,7 +436,7 @@
 			<section data-bespoke-hash="revolution">
 				<div class="table-wrapper">
 					<div class="cell-wrapper">
-						<p>"This revolution is at least as big as the last one, and the last one changed everything.”<br>
+						<p>&#8220;This revolution is at least as big as the last one, and the last one changed everything.&#8221;<br>
 							<span class="alternate-text">Seth Godin</span>
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
@@ -446,6 +449,10 @@
 								<img src="img/ooomf-logo.svg">
 							</div> <!-- close .ooomf-logo -->
 						    <h2 class="alternate-text weight-bold">The Future of Work</h2>
+						    <div class="contact-information">
+						    	<p>Mikael Cho | <a href="mailto:mikael@ooomf.com">mikael@ooomf.com</a> | <a href="https://ooomf.com/" target="_blank" title="Go to ooomf.com">ooomf.com</a></p>
+						    	<p><a href="http://angel.co/ooomf" target="_blank" title="Find us on Angellist">angel.co/ooomf</a></p>
+						    </div> <!-- close .contact-information -->
 						</div> <!-- close .centered -->
 					</div> <!-- close .cell-wrapper -->
 				</div> <!-- close .table-wrapper -->
@@ -455,7 +462,8 @@
 	<script>
 		(function ($) {
 			var Presentation,
-				cache;
+				cache,
+				spanHTML;
 
 			cache = {
 				presentationContainer: $('#presentation'),
@@ -469,11 +477,18 @@
 			Presentation = {
 
 				ready: function () {
+					// initialize bespoke.js
 					bespoke.horizontal.from('article', {
 					  hash: true
 					});
 					Presentation.setupClickHandlers();
 					Presentation.setupListeners();
+
+					// if a hash isn't provided, previous button
+					if ( !window.location.hash ) {
+						Presentation.hidePreviousButton();
+						Presentation.addStartText();
+					}
 				},
 
 				setupClickHandlers: function () {
@@ -489,14 +504,39 @@
 				setupListeners: function () {
 					bespoke.on('activate', function (event) {
 						if (event.index === 0) {
-							cache.previousButton.fadeOut();
+							Presentation.hidePreviousButton();
+							Presentation.addStartText();
 						} else if (event.index === cache.lastSlideIndex) {
-							cache.nextButton.fadeOut();
+							Presentation.hideNextButton();
 						} else {
-							cache.previousButton.fadeIn();
-							cache.nextButton.fadeIn();
+							Presentation.showButtons();
+							Presentation.removeStartText();
 						}
 					});
+				},
+
+				hidePreviousButton: function () {
+					cache.previousButton.fadeOut();
+				},
+
+				hideNextButton: function () {
+					cache.nextButton.fadeOut();
+				},
+
+				showButtons: function () {
+					cache.previousButton.fadeIn();
+					cache.nextButton.fadeIn();
+				},
+
+				addStartText: function () {
+					spanHTML = cache.nextButton.html();
+					cache.nextButton.html('Start' + spanHTML);
+				},
+
+				removeStartText: function () {
+					if (spanHTML) {
+						cache.nextButton.html(spanHTML);
+					}
 				}
 			};
 

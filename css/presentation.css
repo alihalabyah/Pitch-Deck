@@ -3930,7 +3930,77 @@ section.bespoke-inactive {
   font-weight: 600;
   font-size: 55px;
 }
+@media only screen and (max-width: 480px) {
+  .classic h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .classic p {
+    font-size: 18px;
+  }
+  .emphasis {
+    font-size: 30px;
+  }
+}
+.ooomf-logo {
+  width: 300px;
+  margin: auto;
+}
+.ooomf-logo img {
+  width: 100%;
+}
+h2 {
+  font-size: 30px;
+}
+[data-bespoke-hash="introduction"] {
+  background-image: url(../img/map2.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.helper {
+  margin-top: 0;
+  font-size: 14px !important;
+  font-style: italic;
+  opacity: .4;
+}
+@media only screen and (max-width: 480px) {
+  .ooomf-logo {
+    width: 100px;
+  }
+}
+[data-bespoke-hash="the-shift"] {
+  background-image: url(../img/hipster.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.graph-1 {
+  width: 100%;
+  margin: auto;
+}
+[data-bespoke-hash="economic-movement"] {
+  background-image: url(../img/industrial.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="why-1"] {
+  background-image: url(../img/map2.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
 .split-3 {
+  *zoom: 1;
   width: 30%;
   margin-right: 5%;
   float: left;
@@ -3938,8 +4008,152 @@ section.bespoke-inactive {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.split-3:before,
+.split-3:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.split-3:after {
+  clear: both;
+}
 .split-3:last-of-type {
   margin-right: 0;
+}
+[data-bespoke-hash="current-solutions-broken"] p {
+  font-size: 25px;
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+[data-bespoke-hash="current-solutions-broken"] p em {
+  font-size: 20px;
+}
+@media only screen and (max-width: 480px) {
+  [data-bespoke-hash="current-solutions-broken"] p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  [data-bespoke-hash="current-solutions-broken"] p em {
+    font-size: 12px;
+  }
+}
+[data-bespoke-hash="noise"] {
+  background-image: url(../img/noise.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="mobile-and-web-talent"] {
+  background-image: url(../img/collab2.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="meet-jeff"] img {
+  width: 200px;
+  margin-bottom: 30px;
+}
+[data-bespoke-hash="meet-jeff"] p {
+  line-height: 140%;
+}
+@media only screen and (max-width: 480px) {
+  [data-bespoke-hash="meet-jeff"] img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  [data-bespoke-hash="meet-jeff"] p {
+    line-height: 120%;
+  }
+}
+[data-bespoke-hash="pitch-your-inspiration-1"] {
+  background-image: url(../img/estimate-1@2x.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="pitch-your-inspiration-2"] {
+  background-image: url(../img/estimate-2@2x.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="pitch-your-inspiration-3"] {
+  background-image: url(../img/estimate-3@2x.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+[data-bespoke-hash="pros-come-to-you"] {
+  background-image: url(../img/profile@2x.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.graph-2 {
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.image-row {
+  width: 80%;
+}
+.image-row img {
+  width: 20%;
+  margin-right: 4%;
+}
+.image-row .apple {
+  width: 10%;
+}
+@media only screen and (max-width: 480px) {
+  .graph-2 {
+    width: 90%;
+  }
+}
+[data-bespoke-hash="match-rate"] {
+  text-align: right;
+}
+[data-bespoke-hash="meet-milan"] {
+  background-image: url(../img/milan.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: right;
+  text-align: center;
+}
+.graph-3 {
+  width: 100%;
+}
+.freshbooks {
+  margin: auto;
+  margin-bottom: 30px;
+  width: 300px;
+}
+@media only screen and (max-width: 480px) {
+  .freshbooks {
+    width: 40%;
+    margin-bottom: 0;
+  }
+}
+[data-bespoke-hash="vision"] {
+  background-image: url(../img/map2.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
 .split-2 {
   width: 40%;
@@ -3960,164 +4174,38 @@ section.bespoke-inactive {
   width: 30%;
   float: left;
   margin-right: 10%;
-}
-@media only screen and (max-width: 480px) {
-  .classic h3 {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  .classic p {
-    font-size: 18px;
-  }
-}
-.ooomf-logo {
-  width: 300px;
-  margin: auto;
-}
-.ooomf-logo img {
-  width: 100%;
-}
-h2 {
-  font-size: 30px;
-}
-[data-bespoke-hash="introduction"] {
-  background-image: url(../img/map2.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-.helper {
-  margin-top: 0;
-  font-size: 14px !important;
-  font-style: italic;
-  opacity: .4;
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  
-}
-@media only screen and (max-width: 480px) {
-  .ooomf-logo {
-    width: 100px;
+  .split-2 p {
+    font-size: 15px;
+    line-height: 140%;
   }
 }
-[data-bespoke-hash="the-shift"] {
-  background-image: url(../img/hipster.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
+@media only screen and (min-width: 321px) and (max-width: 480) {
+  .split-2 {
+    width: 44%;
+    margin-right: 2%;
+  }
+  .split-2 p {
+    font-size: 12px;
+    line-height: 130%;
+  }
 }
-[data-bespoke-hash="economic-movement"] {
-  background-image: url(../img/industrial.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="why-1"] {
-  background-image: url(../img/map2.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="noise"] {
-  background-image: url(../img/noise.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="mobile-and-web-talent"] {
-  background-image: url(../img/collab2.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="meet-jeff"] img {
-  width: 200px;
-  margin-bottom: 30px;
-}
-[data-bespoke-hash="meet-jeff"] p {
-  line-height: 140%;
-}
-[data-bespoke-hash="pitch-your-inspiration-1"] {
-  background-image: url(../img/estimate-1@2x.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="pitch-your-inspiration-2"] {
-  background-image: url(../img/estimate-2@2x.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="pitch-your-inspiration-3"] {
-  background-image: url(../img/estimate-3@2x.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="pros-come-to-you"] {
-  background-image: url(../img/profile@2x.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="match-rate"] {
-  text-align: right;
-}
-[data-bespoke-hash="meet-milan"] {
-  background-image: url(../img/milan.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
-.image-row {
-  width: 600px;
-}
-.image-row img {
-  width: 20%;
-  margin-right: 4%;
-}
-.image-row .apple {
-  width: 10%;
-}
-[data-bespoke-hash="vision"] {
-  background-image: url(../img/map2.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
-}
-[data-bespoke-hash="fortune-500"] {
-  background-image: url(../img/city.png);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
+@media only screen and (max-width: 320px) {
+  .split-2 {
+    width: 100%;
+    margin-right: 0;
+  }
+  .split-2 p {
+    font-size: 10px;
+    line-height: 130%;
+  }
+  .split-2 .image {
+    width: 20%;
+    margin-right: 5%;
+    margin-bottom: 15px;
+  }
 }
 [data-bespoke-hash="investors-advisors"] .split-3 img {
   width: 35%;
@@ -4131,11 +4219,15 @@ h2 {
 [data-bespoke-hash="investors-advisors"] .split-3:nth-of-type(3) img {
   width: 30%;
 }
+[data-bespoke-hash="investors-advisors"] .split-3 p {
+  font-size: 22px;
+  line-height: 130%;
+}
 [data-bespoke-hash="investors-advisors"] .adam {
-  text-align: right;
+  text-align: left;
 }
 [data-bespoke-hash="investors-advisors"] .adam .title {
-  margin-top: 20px;
+  margin-top: 40px;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -4145,45 +4237,59 @@ h2 {
   margin: 0;
   line-height: 130%;
 }
-[data-bespoke-hash="revolution"] {
-  background-image: url(../img/seth.png);
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  [data-bespoke-hash="investors-advisors"] .split-3 p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  [data-bespoke-hash="investors-advisors"] .split-3 p {
+    font-size: 16px;
+  }
+  [data-bespoke-hash="investors-advisors"] .adam .title {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  [data-bespoke-hash="investors-advisors"] .adam p {
+    font-size: 12px;
+  }
+}
+[data-bespoke-hash="fortune-500"] {
+  background-image: url(../img/city.jpg);
   -o-background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   background-position: center;
 }
-.freshbooks {
-  margin: auto;
-  margin-bottom: 30px;
-  width: 300px;
+[data-bespoke-hash="revolution"] {
+  background-image: url(../img/seth.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
-.graph-1 {
-  width: 80%;
-  margin: auto;
-}
-.graph-2 {
-  width: 80%;
+.contact-information {
   margin-top: 30px;
-  margin-bottom: 30px;
-}
-.graph-3 {
-  width: 95%;
-  margin: auto;
 }
 .controls button {
   padding: 5px 6px;
   position: relative;
   z-index: 1000;
-  background-color: transparent;
   border: 0;
+  background-color: transparent;
   color: #fff;
+  text-transform: uppercase;
   opacity: .4;
 }
 .controls button:hover {
   opacity: .8;
 }
 .controls button span {
+  vertical-align: middle;
+  padding: 0 10px;
   font-size: 30px !important;
 }
 #next {
