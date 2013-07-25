@@ -2188,6 +2188,8 @@ section {
   -moz-background-clip: padding;
   border-radius: 3px;
   background-clip: padding-box;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
 .auto {
   height: auto !important;
@@ -2456,7 +2458,10 @@ h2 {
   }
 }
 .investors-advisors {
-  margin-top: 5%;
+  margin-top: 80px;
+}
+.investors-advisors h3 {
+  font-size: 28px;
 }
 .investors-advisors .split-3 img {
   margin: auto !important;
@@ -2487,6 +2492,12 @@ h2 {
   margin: 0;
   line-height: 130%;
 }
+.investors-advisors .angellist {
+  margin-top: 40px;
+}
+.investors-advisors .angellist p {
+  font-size: 20px !important;
+}
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .investors-advisors .split-3 p {
     font-size: 18px;
@@ -2516,6 +2527,18 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+.scrollable {
+  overflow: auto;
+  -webkit-transition-property: top, bottom;
+  transition-property: top, bottom;
+  -webkit-transition-duration: .2s, .2s;
+  transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: linear, linear;
+  transition-timing-function: linear, linear;
+  -webkit-overflow-scrolling: touch;
 }
 .snap-content {
   position: absolute;
@@ -2525,7 +2548,7 @@ body {
   left: 0;
   width: auto;
   height: auto;
-  z-index: 2;
+  z-index: 3;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0);
@@ -2557,6 +2580,7 @@ body {
   padding: 40px;
   overflow: auto;
   background-color: #0d1318;
+  z-index: 2;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: width 0.3s ease;
   -moz-transition: width 0.3s ease;
@@ -2569,11 +2593,11 @@ body {
 }
 .snap-drawer-left {
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 .snap-drawer-right {
   right: 0;
-  z-index: 1;
+  z-index: 2;
 }
 .snapjs-left .snap-drawer-right,
 .snapjs-right .snap-drawer-left {
@@ -2587,7 +2611,7 @@ body {
   position: fixed;
   top: 20px;
   left: 20px;
-  padding: 10px 8px 5px 15px;
+  padding: 14px 14px 9px 22px;
   font-size: 20px;
   z-index: 1000;
   -webkit-transition: all 0.3s ease;
@@ -2599,4 +2623,8 @@ body {
 }
 #control-button.active {
   left: 286px;
+}
+#content {
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
