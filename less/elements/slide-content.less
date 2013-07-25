@@ -1,28 +1,52 @@
+@alternateSlideBackgroundColor: #282F37;
+
 // ==========================================================================
 // * General slide styles
 // ==========================================================================
 
 .alternate-text {
 	color: @blue;
+	font-weight: 600;
 }
 
 .classic {
 	h3 {
-		font-size: 25px;
+		font-size: 58px;
 		line-height: 120%;
 		margin-bottom: 30px;
 	}
 
 	p {
-		font-size: 30px;
+		font-size: 35px;
 		line-height: 180%;
 	}
+
+	.secondary {
+		font-size: 24px;
+	}
+}
+
+.contained {
+	width: 75%;
+	margin: auto;
 }
 
 .emphasis {
 	color: @blue;
-	font-weight: 600;
-	font-size: 55px;
+	font-weight: 700;
+	font-size: 65px;
+}
+
+.split-3 {
+	.clearfix();
+	width: 30%;
+	margin-right: 5%;
+	float: left;
+	.box-sizing(border-box);
+
+	&:last-of-type {
+		margin-right: 0;
+	}
 }
 
 @media only screen and (max-width: 480px) {
@@ -43,7 +67,7 @@
 }
 
 // ==========================================================================
-// * First slide: Introduction
+// * Introduction
 // ==========================================================================
 
 .ooomf-logo {
@@ -59,19 +83,6 @@ h2 {
 	font-size: 30px;
 }
 
-[data-bespoke-hash="introduction"] {
-	background-image: url(../img/map2.jpg);
-	.background-size(cover);
-	background-position: center;
-}
-
-.helper {
-	margin-top: 0;
-	font-size: 14px !important;
-	font-style: italic;
-	opacity: .4;
-}
-
 // iPhone
 @media only screen and (max-width: 480px) {
 	.ooomf-logo {
@@ -79,239 +90,92 @@ h2 {
 	}
 }
 
-
-
 // ==========================================================================
-// * Second slide: The shift
+// * The remote movement
 // ==========================================================================
 
 
-[data-bespoke-hash="the-shift"] {
+#the-remote-movement {
 	background-image: url(../img/hipster.jpg);
 	.background-size(cover);
 	background-position: center;
-}
 
-// ==========================================================================
-// * Third slide: Graph 1
-// ==========================================================================
-
-.graph-1 {
-	width: 100%;
-	margin: auto;
-}
-
-// ==========================================================================
-// * Fourth slide: Economic Movement
-// ==========================================================================
-
-
-[data-bespoke-hash="economic-movement"] {
-	background-image: url(../img/industrial.jpg);
-	.background-size(cover);
-	background-position: center;
-}
-
-// ==========================================================================
-// *  5th slide: why-1
-// ==========================================================================
-
-[data-bespoke-hash="why-1"] {
-	background-image: url(../img/map2.jpg);
-	.background-size(cover);
-	background-position: center;
-}
-
-// ==========================================================================
-// *  6th slide: why-2
-// ==========================================================================
-
-// ==========================================================================
-// *  7th slide: startups will contract $1 Billion
-// ==========================================================================
-
-// nothing
-
-// ==========================================================================
-// *  8th slide: current solutions broken
-// ==========================================================================
-
-.split-3 {
-	.clearfix();
-	width: 30%;
-	margin-right: 5%;
-	float: left;
-	.box-sizing(border-box);
-
-	&:last-of-type {
-		margin-right: 0;
+	h3 {
+		margin-bottom: 50px;
 	}
 }
 
-[data-bespoke-hash="current-solutions-broken"] {
-	p {
-		font-size: 25px;
-		line-height: 130%;
-		margin-bottom: 10px;
-
-		em {
-			font-size: 20px;
-		}
-	}
-
-	@media only screen and (max-width: 480px) {
-		p {
-			font-size: 14px;
-			margin-bottom: 5px;
-
-			em {
-				font-size: 12px;
-			}
-		}
-	}
-}
-
-
 // ==========================================================================
-// *  8th slide: current solutions broken
+// *  Our opportunity
 // ==========================================================================
 
-// ==========================================================================
-// *  9th slide: noise (more independent professionals = more disconnected)
-// ==========================================================================
-
-[data-bespoke-hash="noise"] {
+#opportunity {
 	background-image: url(../img/noise.jpg);
 	.background-size(cover);
 	background-position: center;
+
+	h3 {
+		margin-bottom: 70px;
+	}
+
+	li {
+		font-size: 25px;
+	}
+
 }
 
 // ==========================================================================
-// *  10th slide: ooomf - a platform that connects quality projects ...
+// *  Solution
 // ==========================================================================
 
-// nothing
+// nothing yet
 
 // ==========================================================================
-// * 11th slide: starting with the most in demand: mobile and web talent
+// * mobile web and talent
 // ==========================================================================
 
-[data-bespoke-hash="mobile-and-web-talent"] {
+#mobile-and-web-talent {
 	background-image: url(../img/collab2.jpg);
 	.background-size(cover);
 	background-position: center;
-}
 
-// ==========================================================================
-// *  12th slide: meet jeff
-// ==========================================================================
-
-[data-bespoke-hash="meet-jeff"] {
-	img {
-		width: 200px;
-		margin-bottom: 30px;
-	}
-
-	p {
-		line-height: 140%;
-	}
-
-	@media only screen and (max-width: 480px) {
-		img {
-			width: 100px;
-			margin-bottom: 20px;
-		}
-
-		p {
-			line-height: 120%;
-		}
+	.contained {
+		margin-top: 50px;
 	}
 }
 
 // ==========================================================================
-// *  13th, 14th, 15th: inspiration slides
+// * product
 // ==========================================================================
 
+#product {
 
-[data-bespoke-hash="pitch-your-inspiration-1"] {
-	background-image: url(../img/estimate-1@2x.jpg);
-	.background-size(cover);
-	background-position: center;
-}
-
-[data-bespoke-hash="pitch-your-inspiration-2"] {
-	background-image: url(../img/estimate-2@2x.jpg);
-	.background-size(cover);
-	background-position: center;
-}
-
-[data-bespoke-hash="pitch-your-inspiration-3"] {
-	background-image: url(../img/estimate-3@2x.jpg);
-	.background-size(cover);
-	background-position: center;
 }
 
 // ==========================================================================
-// *  16th: the best pros come to you
+// * this-year
 // ==========================================================================
 
-[data-bespoke-hash="pros-come-to-you"] {
-	background-image: url(../img/profile@2x.jpg);
-	.background-size(cover);
-	background-position: center;
+#this-year {
+	background-color: @alternateSlideBackgroundColor;
 }
 
 // ==========================================================================
-// *  17th: review: no noise, no bidding, no spam
+// * Quality projects bring quality talent.
 // ==========================================================================
 
-// nothing
+#quality-talent {
 
-// ==========================================================================
-// *  18th: we handle: payments, legal, communication
-// ==========================================================================
+}
 
-// nothing
-
-// ==========================================================================
-// *  19th: this year: $650,000, $300,0000
-// ==========================================================================
-
-// nothing
-
-// ==========================================================================
-// *  20th: on pace for $5MM
-// ==========================================================================
-
-// nothing
-
-// ==========================================================================
-// *  21st: average project budget of 5k
-// ==========================================================================
-
-// nothing
-
-// ==========================================================================
-// *  22nd: quality projects bring quality talent (path, apple, mailbox, google)
-// ==========================================================================
-
-.graph-2 {
+.graph-1 {
 	width: 80%;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
-.image-row {
-	width: 80%;
-
-	img {
-		width: 20%;
-		margin-right: 4%;
-	}
-
-	.apple {
-		width: 10%;
-	}
+.companies {
+	width: 50%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -321,89 +185,150 @@ h2 {
 }
 
 // ==========================================================================
-// *  23rd: match rate: 99% of projects match within 24 hours
+// * Market
 // ==========================================================================
 
-[data-bespoke-hash="match-rate"] {
-	text-align: right;
-}
+#market {
 
-// ==========================================================================
-// *  24th: meet milan
-// ==========================================================================
+	background-color: @alternateSlideBackgroundColor;
 
-[data-bespoke-hash="meet-milan"] {
-	background-image: url(../img/milan.jpg);
-	.background-size(cover);
-	background-position: right;
-	text-align: center;
-}
-
-// ==========================================================================
-// *  25th: how did we get here
-// ==========================================================================
-
-// nothing
-
-// ==========================================================================
-// *  26th: where we're headed
-// ==========================================================================
-
-.graph-3 {
-	width: 100%;
-}
-
-// ==========================================================================
-// *  27th: partnerships: freshbooks
-// ==========================================================================
-
-.freshbooks {
-	margin: auto;
-	margin-bottom: 30px;
-	width: 300px;
-}
-
-@media only screen and (max-width: 480px) {
-	.freshbooks {
-		width: 40%;
-		margin-bottom: 0;
+	.graph-2 {
+		width: 100%;
 	}
 }
 
 // ==========================================================================
-// *  28th: vision - unlocking access for anyone, anywhere ...
+// * Business model
 // ==========================================================================
 
-[data-bespoke-hash="vision"] {
+#business-model {
+	p {
+		line-height: 140%;
+	}
+}
+
+// ==========================================================================
+// * How we get customers
+// ==========================================================================
+
+#how-we-get-customers {
+	background-color: @alternateSlideBackgroundColor;
+
+	h4 {
+		text-transform: uppercase;
+		color: @blue;
+		font-size: 30px;
+		line-height: 120%;
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 140%;
+		margin-bottom: 20px;
+	}
+
+	.content, .partners {
+		float: left;
+		width: 45%;
+		margin-right: 5%;
+	}
+
+	.tools, .referral, .automated {
+		float: left;
+		width: 45%;
+	}
+}
+
+// ==========================================================================
+// *  Fortune 500
+// ==========================================================================
+
+#fortune-500 {
+	background-image: url(../img/city.jpg);
+	.background-size(cover);
+	background-position: center;
+}
+
+// ==========================================================================
+// *  Vision
+// ==========================================================================
+
+#vision {
 	background-image: url(../img/map2.jpg);
 	.background-size(cover);
 	background-position: center;
 }
 
 // ==========================================================================
-// *  29th: TEAM
+// *  Team & Investors
 // ==========================================================================
 
-.split-2 {
-	width: 40%;
-	margin-right: 7%;
-	float: left;
-	.box-sizing(border-box);
-
-	.text {
+#team {
+	background-color: @alternateSlideBackgroundColor;
+	.split-2 {
+		width: 45%;
+		margin-right: 5%;
 		float: left;
-		width: 60%;
+		.box-sizing(border-box);
+
+		.text {
+			float: left;
+			width: 60%;
+
+			.alternate-text {
+				margin-bottom: 0;
+			}
+		}
+
+		p {
+			font-size: 17px;
+		}
+
+		.image {
+			width: 20%;
+			float: left;
+			margin-right: 10%;
+			margin-bottom: 0;
+		}
 	}
 
-	p {
-		font-size: 17px;
+	h4 { text-align: right; }
+
+	.company {
+		margin-bottom: 10px;
+		.clearfix();
+
+		img {
+			float: right;
+			width: 50px;
+			margin-right: 20px;
+		}
+
+		.bdc {
+			width: 100px;
+			margin-right: 20px;
+		}
+
+		p {
+			padding-top: 20px;
+			float: right;
+		}
 	}
 
-	.image {
-		width: 30%;
-		float: left;
-		margin-right: 10%;
-		margin-bottom: 0;
+	.adam {
+		margin-top: 50px;
+		text-align: right;
+
+		.title {
+			font-weight: 600;
+			margin-top: 25px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			margin-bottom: 0;
+			line-height: 130%;
+		}
 	}
 }
 
@@ -449,105 +374,24 @@ h2 {
 }
 
 // ==========================================================================
-// *  30th: investors & advisors
+// *  Raising $1MM/Last slide
 // ==========================================================================
 
-[data-bespoke-hash="investors-advisors"] {
-	
-	.split-3 img {
-		width: 35%;
-	}
-
-	.split-3:nth-of-type(1) img { // real
-		padding-bottom: 20px;
-	}
-
-	.split-3:nth-of-type(2) img { // bdc
-		width: 60%;
-	}
-
-	.split-3:nth-of-type(3) img { // FF
-		width: 30%;
-	}
-
-	.split-3 p {
-		font-size: 22px;
-		line-height: 130%;
-	}
-
-	.adam {
-		text-align: left;
-		
-		.title {
-			margin-top: 40px;
-			font-size: 18px;
-			font-weight: 600;
-			margin-bottom: 10px;
-		}
-
+#raising {
+	.contact-information {
+		margin-top: 30px;
 		p {
-			font-size: 16px;
-			margin: 0;
-			line-height: 130%;
-		}
-	}
-
-	@media only screen and (min-width: 481px) and (max-width: 768px) {
-		.split-3 p {
 			font-size: 18px;
 		}
 	}
 
-	@media only screen and (max-width: 480px) {
-
-		.split-3 p {
-			font-size: 16px;
-		}
-		.adam {
-			.title {
-				margin-top: 20px;
-				font-size: 12px;
-				margin-bottom: 5px;
-			}
-			p {
-				font-size: 12px;
-			}
-		}
+	p {
+		font-size: 25px;
+		line-height: 140%;
 	}
-}
 
-
-
-// ==========================================================================
-// *  31st: raising $1MM
-// ==========================================================================
-
-// nothing
-
-// ==========================================================================
-// *  32nd: fortune 500
-// ==========================================================================
-
-[data-bespoke-hash="fortune-500"] {
-	background-image: url(../img/city.jpg);
-	.background-size(cover);
-	background-position: center;
-}
-
-// ==========================================================================
-// *  33rd: seth godin revolution quote
-// ==========================================================================
-
-[data-bespoke-hash="revolution"] {
-	background-image: url(../img/seth.jpg);
-	.background-size(cover);
-	background-position: center;
-}
-
-// ==========================================================================
-// *  34th: final slide
-// ==========================================================================
-
-.contact-information {
-	margin-top: 30px;
+	.ooomf-logo {
+		margin-top: 80px;
+		width: 150px;
+	}
 }
