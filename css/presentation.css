@@ -2266,12 +2266,7 @@ h2 {
   }
 }
 #the-remote-movement {
-  background-image: url(../img/hipster.jpg);
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center;
+  background-color: #17232c;
 }
 #the-remote-movement h3 {
   margin-bottom: 50px;
@@ -2321,17 +2316,12 @@ h2 {
 .graph-1 {
   width: 100%;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 .companies {
   margin: auto;
-  margin-top: 40px;
-  width: 50%;
-}
-@media only screen and (max-width: 480px) {
-  .graph-2 {
-    width: 80%;
-  }
+  margin-top: 80px;
+  width: 70%;
 }
 #market {
   background-color: #17232c;
