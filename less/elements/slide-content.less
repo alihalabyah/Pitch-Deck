@@ -181,18 +181,20 @@ h2 {
 }
 
 .graph-1 {
-	width: 80%;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	width: 100%;
+	margin: auto;
+	margin-top: 60px;
 }
 
 .companies {
+	margin: auto;
+	margin-top: 40px;
 	width: 50%;
 }
 
 @media only screen and (max-width: 480px) {
 	.graph-2 {
-		width: 90%;
+		width: 80%;
 	}
 }
 
@@ -216,6 +218,7 @@ h2 {
 #business-model {
 	p {
 		line-height: 140%;
+		margin-bottom: 50px;
 	}
 }
 
@@ -252,6 +255,16 @@ h2 {
 }
 
 // ==========================================================================
+// *  The shift
+// ==========================================================================
+
+#the-shift {
+	background-image: url(../img/hipster.jpg);
+	.background-size(cover);
+	background-position: center;
+}
+
+// ==========================================================================
 // *  Fortune 500
 // ==========================================================================
 
@@ -259,6 +272,10 @@ h2 {
 	background-image: url(../img/city.jpg);
 	.background-size(cover);
 	background-position: center;
+
+	p {
+		margin-bottom: 70px;
+	}
 }
 
 // ==========================================================================
@@ -275,72 +292,34 @@ h2 {
 // *  Team & Investors
 // ==========================================================================
 
+// ==========================================================================
+// *  29th: TEAM
+// ==========================================================================
+
 #team {
 	background-color: @alternateSlideBackgroundColor;
-	.split-2 {
-		width: 45%;
-		margin-right: 5%;
+}
+
+.split-2 {
+	width: 40%;
+	margin-right: 7%;
+	float: left;
+	.box-sizing(border-box);
+
+	.text {
 		float: left;
-		.box-sizing(border-box);
-
-		.text {
-			float: left;
-			width: 60%;
-
-			.alternate-text {
-				margin-bottom: 0;
-			}
-		}
-
-		p {
-			font-size: 17px;
-		}
-
-		.image {
-			width: 20%;
-			float: left;
-			margin-right: 10%;
-			margin-bottom: 0;
-		}
+		width: 60%;
 	}
 
-	h4 { text-align: right; }
-
-	.company {
-		margin-bottom: 10px;
-		.clearfix();
-
-		img {
-			float: right;
-			width: 50px;
-			margin-right: 20px;
-		}
-
-		.bdc {
-			width: 100px;
-			margin-right: 20px;
-		}
-
-		p {
-			padding-top: 20px;
-			float: right;
-		}
+	p {
+		font-size: 17px;
 	}
 
-	.adam {
-		margin-top: 50px;
-		text-align: right;
-
-		.title {
-			font-weight: 600;
-			margin-top: 25px;
-			margin-bottom: 10px;
-		}
-
-		p {
-			margin-bottom: 0;
-			line-height: 130%;
-		}
+	.image {
+		width: 30%;
+		float: left;
+		margin-right: 10%;
+		margin-bottom: 0;
 	}
 }
 
@@ -386,28 +365,88 @@ h2 {
 }
 
 // ==========================================================================
-// *  Raising $1MM/Last slide
+// *  30th: investors & advisors
 // ==========================================================================
 
-#raising {
-	.contact-information {
-		margin-top: 30px;
+.investors-advisors {
+	margin-top: 5%;
+
+	.split-3 img {
+		margin: auto !important;
+		width: 35%;
+	}
+
+	.split-3:nth-of-type(1) img { // real
+		padding-bottom: 20px;
+	}
+
+	.split-3:nth-of-type(2) img { // bdc
+		width: 60%;
+	}
+
+	.split-3:nth-of-type(3) img { // FF
+		width: 30%;
+	}
+
+	.split-3 p {
+		text-align: center;
+		font-size: 22px;
+		line-height: 130%;
+	}
+
+	.adam {
+		
+		.title {
+			margin-top: 2%;
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+
 		p {
+			font-size: 16px;
+			margin: 0;
+			line-height: 130%;
+		}
+	}
+
+	@media only screen and (min-width: 481px) and (max-width: 768px) {
+		.split-3 p {
 			font-size: 18px;
 		}
 	}
 
+	@media only screen and (max-width: 480px) {
+
+		.split-3 p {
+			font-size: 16px;
+		}
+		.adam {
+			.title {
+				margin-top: 20px;
+				font-size: 12px;
+				margin-bottom: 5px;
+			}
+			p {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+// ==========================================================================
+// *  Raising $1MM/Last slide
+// ==========================================================================
+
+#raising {
+	
+}
+
+#contact {
+	margin-top: 100px;
+
 	p {
-		font-size: 25px;
-		line-height: 140%;
+		font-size: 24px;
 	}
 
-	h2 {
-		margin: 0;
-	}
-
-	.ooomf-logo {
-		margin-top: 80px;
-		width: 150px;
-	}
 }

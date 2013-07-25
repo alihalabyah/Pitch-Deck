@@ -2189,11 +2189,8 @@ section {
   border-radius: 3px;
   background-clip: padding-box;
 }
-.double {
-  height: 150%;
-}
-.table-wrapper {
-  min-width: 640px;
+.auto {
+  height: auto !important;
 }
 .alternate-text {
   color: #48b0e7;
@@ -2308,16 +2305,18 @@ h2 {
   background-color: #17232c;
 }
 .graph-1 {
-  width: 80%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
 }
 .companies {
+  margin: auto;
+  margin-top: 40px;
   width: 50%;
 }
 @media only screen and (max-width: 480px) {
   .graph-2 {
-    width: 90%;
+    width: 80%;
   }
 }
 #market {
@@ -2328,6 +2327,7 @@ h2 {
 }
 #business-model p {
   line-height: 140%;
+  margin-bottom: 50px;
 }
 #how-we-get-customers {
   background-color: #17232c;
@@ -2355,6 +2355,14 @@ h2 {
   float: left;
   width: 45%;
 }
+#the-shift {
+  background-image: url(../img/hipster.jpg);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
 #fortune-500 {
   background-image: url(../img/city.jpg);
   -o-background-size: cover;
@@ -2362,6 +2370,9 @@ h2 {
   -moz-background-size: cover;
   background-size: cover;
   background-position: center;
+}
+#fortune-500 p {
+  margin-bottom: 70px;
 }
 #vision {
   background-image: url(../img/map2.jpg);
@@ -2374,71 +2385,26 @@ h2 {
 #team {
   background-color: #17232c;
 }
-#team .split-2 {
-  width: 45%;
-  margin-right: 5%;
+.split-2 {
+  width: 40%;
+  margin-right: 7%;
   float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#team .split-2 .text {
+.split-2 .text {
   float: left;
   width: 60%;
 }
-#team .split-2 .text .alternate-text {
-  margin-bottom: 0;
-}
-#team .split-2 p {
+.split-2 p {
   font-size: 17px;
 }
-#team .split-2 .image {
-  width: 20%;
+.split-2 .image {
+  width: 30%;
   float: left;
   margin-right: 10%;
   margin-bottom: 0;
-}
-#team h4 {
-  text-align: right;
-}
-#team .company {
-  margin-bottom: 10px;
-  *zoom: 1;
-}
-#team .company:before,
-#team .company:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-#team .company:after {
-  clear: both;
-}
-#team .company img {
-  float: right;
-  width: 50px;
-  margin-right: 20px;
-}
-#team .company .bdc {
-  width: 100px;
-  margin-right: 20px;
-}
-#team .company p {
-  padding-top: 20px;
-  float: right;
-}
-#team .adam {
-  margin-top: 50px;
-  text-align: right;
-}
-#team .adam .title {
-  font-weight: 600;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-#team .adam p {
-  margin-bottom: 0;
-  line-height: 130%;
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .split-2 p {
@@ -2471,22 +2437,61 @@ h2 {
     margin-bottom: 15px;
   }
 }
-#raising .contact-information {
-  margin-top: 30px;
+.investors-advisors {
+  margin-top: 5%;
 }
-#raising .contact-information p {
+.investors-advisors .split-3 img {
+  margin: auto !important;
+  width: 35%;
+}
+.investors-advisors .split-3:nth-of-type(1) img {
+  padding-bottom: 20px;
+}
+.investors-advisors .split-3:nth-of-type(2) img {
+  width: 60%;
+}
+.investors-advisors .split-3:nth-of-type(3) img {
+  width: 30%;
+}
+.investors-advisors .split-3 p {
+  text-align: center;
+  font-size: 22px;
+  line-height: 130%;
+}
+.investors-advisors .adam .title {
+  margin-top: 2%;
   font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
-#raising p {
-  font-size: 25px;
-  line-height: 140%;
-}
-#raising h2 {
+.investors-advisors .adam p {
+  font-size: 16px;
   margin: 0;
+  line-height: 130%;
 }
-#raising .ooomf-logo {
-  margin-top: 80px;
-  width: 150px;
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .investors-advisors .split-3 p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .investors-advisors .split-3 p {
+    font-size: 16px;
+  }
+  .investors-advisors .adam .title {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .investors-advisors .adam p {
+    font-size: 12px;
+  }
+}
+#contact {
+  margin-top: 100px;
+}
+#contact p {
+  font-size: 24px;
 }
 html,
 body {
@@ -2528,13 +2533,21 @@ body {
   left: auto;
   width: 265px;
   height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px;
   overflow: auto;
+  background-color: #0d1318;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: width 0.3s ease;
   -moz-transition: width 0.3s ease;
   -ms-transition: width 0.3s ease;
   -o-transition: width 0.3s ease;
   transition: width 0.3s ease;
+}
+.snap-drawer li {
+  margin-bottom: 15px;
 }
 .snap-drawer-left {
   left: 0;
@@ -2556,7 +2569,7 @@ body {
   position: fixed;
   top: 20px;
   left: 20px;
-  padding: 10px 8px 5px 14px;
+  padding: 10px 8px 5px 15px;
   font-size: 20px;
   z-index: 1000;
   -webkit-transition: all 0.3s ease;
@@ -2564,6 +2577,7 @@ body {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background-color: #0d1318;
 }
 #control-button.active {
   left: 286px;
