@@ -2348,16 +2348,30 @@ h2 {
   margin-bottom: 20px;
 }
 #how-we-get-customers .content,
-#how-we-get-customers .partners {
+#how-we-get-customers .tools {
   float: left;
   width: 45%;
+  margin-top: 30px;
   margin-right: 5%;
+  margin-bottom: 100px;
 }
-#how-we-get-customers .tools,
+#how-we-get-customers .partners,
 #how-we-get-customers .referral,
 #how-we-get-customers .automated {
   float: left;
-  width: 45%;
+  width: 30%;
+  margin-right: 3%;
+}
+#how-we-get-customers .partners h4,
+#how-we-get-customers .referral h4,
+#how-we-get-customers .automated h4 {
+  font-size: 20px;
+}
+#how-we-get-customers .partners img,
+#how-we-get-customers .referral img,
+#how-we-get-customers .automated img {
+  width: 60%;
+  margin: auto;
 }
 #the-shift {
   background-image: url(../img/hipster.jpg);
@@ -2463,7 +2477,7 @@ h2 {
   line-height: 130%;
 }
 .investors-advisors .adam .title {
-  margin-top: 2%;
+  margin-top: 40px;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
