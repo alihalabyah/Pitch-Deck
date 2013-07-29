@@ -2315,20 +2315,28 @@ h2 {
 #this-year {
   background-color: #17232c;
 }
-.graph-1 {
+#quality-talent .left {
+  float: left;
+  width: 50%;
+  margin-right: 10%;
+}
+#quality-talent .right {
+  float: left;
+  width: 40%;
+}
+.graph-2 {
   width: 100%;
   margin: auto;
-  margin-top: 80px;
 }
 .companies {
   margin: auto;
   margin-top: 80px;
-  width: 70%;
+  height: 100%;
 }
 #market {
   background-color: #17232c;
 }
-#market .graph-2 {
+#market .graph-3 {
   width: 100%;
 }
 #business-model p {
