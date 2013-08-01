@@ -7,20 +7,20 @@
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="css/presentation.css">
 
+	<script src="components/jquery/jquery.js"></script>
+	<script src="components/jquery.typer.js/src/jquery.typer.js"></script>
+	<script src="components/jquery-animate-numbers/jquery.animateNumbers.js"></script>
+	<script src="components/jquery-scrollspy/jquery-scrollspy.js"></script>
 	<script src="js/source/snap.js"></script>
-	<script src="js/source/jquery.js"></script>
-
-	<!-- webfonts -->
-	<link href="css/webfonts/webfont-icons.css" rel="stylesheet">
-	<!--[if lte IE 7]><script src="css/webfonts/lte-ie7.js"></script><![endif]-->
-	<script type="text/javascript" src="//use.typekit.net/ewu3gkp.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="components/Chart.js/chart.js"></script>
 
 	<link rel="icon" type="image/x-icon" href="favicon.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+	<link rel="stylesheet" type="text/css" href="webfonts/icons.css">
 </head>
 <body>
 <a id="control-button" class="btn btn-inverse" href="#"><span class="icon" aria-hidden="true" data-icon="&#xe9a1;"></span></a>
@@ -28,364 +28,329 @@
     <div class="snap-drawer snap-drawer-left scrollable">
         <ul class="unstyled">
         	<li><a href="#introduction">Intro</a></li>
-        	<li><a href="#the-shift">Opportunity</a></li>
-        	<li><a href="#ooomf">Solution</a></li>
+        	<li><a href="#opportunity">Opportunity</a></li>
+        	<li><a href="#solution">Solution</a></li>
         	<li><a href="#product">Product</a></li>
-        	<li><a href="#this-year">Traction</a></li>
+        	<li><a href="#traction">Traction</a></li>
         	<li><a href="#market">Market</a></li>
         	<li><a href="#business-model">Business model</a></li>
-        	<li><a href="#how-we-get-customers">How we get customers</a></li>
         	<li><a href="#vision">Vision</a></li>
+        	<li><a href="#customers">Customers</a></li>
         	<li><a href="#team">Team & Investors</a></li>
         	<li><a href="#raising">Raise</a></li>
         </ul>
     </div>
 </div>
 <div class="snap-content scrollable" id="content">
-	<article class="classic">
-		<section id="introduction">
-		  	<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<div class="ooomf-logo">
-							<img src="img/ooomf-logo.svg">
-						</div> <!-- close .ooomf-logo -->
-					    <h2 class="alternate-text weight-bold">The Future of Work</h2>
-					</div> <!-- close .centered -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="the-shift" class="auto">
+	<div class="container">
+		<div id="introduction" class="centered section">
 			<div class="table-wrapper">
 				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading">The Shift</h3>
-						<div class="contained">
-							<p>There will be <a href="#">more independent workers</a> by 2020 than full-time employees.</p>
-						</div> <!-- close .contained -->
-					</div> <!-- close .centered -->
+					<div class="ooomf-logo">
+						<img src="img/ooomf-logo-gray.svg">
+					</div> <!-- close .ooomf-logo -->
+				    <h2>The Future of Work</h2>
 				</div> <!-- close .cell-wrapper -->
 			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="the-remote-movement" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading alternate-text">Average is over</h3>
-						<p class="contained">Dominant players today create price wars, failing to attract top talent. Smart employers are looking elsewhere.</p>
-					</div> <!-- close .centered -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="ooomf" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading">Solution</h3>
-						<p class="alternate-text weight-bold">ooomf</p>
-						<p>An exclusive, members-only platform connecting quality projects with only the best independent professionals. </p>
-					</div> <!-- close .centered -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="mobile-and-web-talent" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<p>Started with the most in demand field:<br>
-							<span class="alternate-text">mobile and web</span></p>
-						<div class="contained">
-							<p class="secondary">vetted developers and designers (App Store 4-stars or better)</p>
-							<p class="secondary">curated projects (avg. project value 10x competition)</p>
+		</div> <!-- close #introduction -->
+		
+		<div id="opportunity" class=" slide centered">
+			<h3>Opportunity</h3>
+			<p class="">The most significant<br>
+			<span class="weight-regular">economic movement</span><br>
+			since the Industrial Revolution.</p>
+			<div class="relative">
+				<canvas id="shift-in-employment" style="margin-top: 100px" width="600" height="300"></canvas>
+				<h6 class="figure-label figure-label-blue js-figure" style="display: none; position: absolute; top: 114px; right: -8px;"># of independent<br> professionals</h6>
+				<h6 class="figure-label figure-label-gray js-figure" style="display: none; position: absolute; top: 167px; right: 17px;"># of full-time<br> professionals</h6>
+			</div> <!-- close .relative -->
+		</div>
+
+		<div class="slide centered">
+			<p>Work can now be done <span data-typer-targets="from anywhere, at anytime, in any place">in any space</span>.</p>
+		</div> <!-- close .slide -->
+
+		<div class="slide centered">
+			<p>But more work online means more noise.</p>
+		</div> <!-- close .slide -->
+
+		<div class="slide centered">
+			<p>Today, lowest price wins.</p>
+		</div> <!-- close .slide -->
+
+		<div class="slide centered section">
+			<p>Average is over.</p>
+			<p class="light">Current systems fail to attract top talent.</p>
+			<p class="light">Smart employers are looking elsewhere.</p>
+		</div> <!-- close .slide -->
+		
+
+		<div id="solution" class="slide centered">
+			<h3>Solution</h3>
+			<p class=" weight-bold">ooomf</p>
+			<p class="contained">An exclusive, members-only platform connecting quality projects with only the best independent professionals. </p>
+		</div> <!-- #solution -->
+
+
+		<div class="slide centered section">
+			<p>We've started with the most in demand field:<br>
+			<span class="light">mobile and web</span></p>
+		</div> <!-- close .slide -->
+
+		<div id="product" class="slide section">
+			<div class="centered">
+				<h3>Product</h3>
+			</div> <!-- close .centered -->
+			<div class="row-fluid" style="margin-bottom: 100px">
+				<div class="span4">
+						<p>Jeff needs an iPhone developer</p>
+				</div> <!-- close .span4 -->
+				<div class="span8 centered">
+					<img src="img/ipad-estimate.png">
+					<p class="">Submit Project from any device</p>
+				
+				
+					<img src="img/ooomf-review.svg">
+				
+				
+					<img src="img/ipad-profile.png">
+					<p class="">The single best pro comes to you</p>
+				</div> <!-- close .span8 -->
+			</div> <!-- close .row-fluid -->
+
+			<div class="centered" style="margin-top: 150px; margin-bottom: 50px;">
+				<p><span style="font-size: 180px; font-weight: 100;">99%</span><br>
+					projects match in less than<br>
+					<span style="font-weight: 100; font-size: 90px; line-height: 75px;">24 hours</span></p>
+				<p class="light" style="margin-top: 25px;">(3x faster than competition)</p>
+			</div>
+		</div> <!-- close #product -->
+
+		<div id="traction" class="slide centered">
+			<h3>Traction</h3>
+			<canvas id="traction-chart" width="400" height="400"></canvas>
+		</div> <!-- close .slide -->
+
+		<div id="js-traction-numbers" class="slide centered">
+			<div class="row-fluid" -->
+				<div class="span6" style="margin-top: 30px;">
+					<p><span style="font-size: 60px; font-weight: 400;">$<span id="revenue-in-4-months">0</span></span><br>
+					in projects in 4 months</p>
+				</div> <!-- close .span6 -->
+			
+				<div class="span6">
+					<p><span style="font-size: 60px; font-weight:400;"><span id="growth-rate">0</span>%</span><br>
+					month-to-month growth<br>
+					over last 3 months</p>
+				</div> <!-- close .span6 -->
+			</div> <!-- close .row-fluid -->
+		</div> <!-- close .slide -->
+
+		<div class="slide section">
+			<div class="row-fluid">
+				<div class="span6 relative">
+					<canvas id="average-budget" width="200" height="400"></canvas>
+					<p class="figure-label figure-label-blue" style="position: absolute; top: 390px; left: 65px;">ooomf</p>
+					<p class="figure-label figure-label-gray" style="position: absolute; top: 390px; left: 120px;">Competitors</p>
+					<p class="figure-label" style="position: absolute; top: 420px; left: 45px; font-weight: 600;">Average Project Budget</p>
+				</div> <!-- close .span6 -->
+				<div class="span6 text-right">
+					<p>Quality projects bring quality talent.</p>
+					<img src="img/companies-using-ooomf.png" style="margin-top: 80px;" alt="Companies using ooomf: Path, Apple, Google, and Mailbox">
+				</div> <!-- close .span6 -->
+			</div> <!-- close .row-fluid -->
+		</div> <!-- close .slide -->
+
+		<div id="market" class="slide centered section">
+			<h3>Market</h3>
+			<div class="graph-3">
+				<img src="img/graph-3.svg">
+			</div> <!-- close .graph-3 -->
+		</div> <!-- #market -->
+
+		<div id="business-model" class="slide centered section">
+			<h3 style="margin-bottom: 100px;">Business Model</h3>
+			<p><span style="font-size: 200px; font-weight:100;">15%</span><br>
+				commission on each project</p>
+				<p>&nbsp;</p>
+				<a href="https://cloudup.com/chPuiOCkbyb" class="btn btn-danger" target="_blank">See our detailed metrics</a>
+		</div> <!-- close #business-model -->
+		
+		<div id="vision" class="slide centered section">
+			<h3>Vision</h3>
+			<p>The most trusted, collaborative place for anyone, anywhere to do exceptional work online.</p>
+
+			<p>The heart of online work.</p>
+		</div> <!-- close #vision -->
+
+		<div id="customers" class="slide section">
+			<div class="centered">
+				<h3>Customers</h3>
+			</div> <!-- close .centered -->
+		
+			<div class="row-fluid">
+				<div class="span6">
+					<h4>Content</h4>
+					<p><span class="">Guest postings:</span> Fast Company, Inc., TechCrunch, TED</p>
+					<p><span class="">Content marketing:</span> 20,000+ opt-in subscribers</p>
+					<p><span class="">Search:</span> Targeted content aimed at high volume/low competition</p>
+				</div> <!-- close .span6 -->
+				<div class="span6">
+					<h4>Tools</h4>
+					<p><a href="http://unsplash.com/" target="_blank">Unsplash:</a> 35,000+ opt-in subscribers</p>
+					<p><a href="http://lukechesser.github.io/Popular-UIs/" target="_blank">Popular Designs:</a> 4,000+ opt-in subscribers</p>
+					<p><a href="http://launchthisyear.com/" target="_blank">Launch This Year:</a> 15,000+ opt-in subscribers in 3 days</p>
+				</div> <!-- close .span6 -->
+			</div> <!-- close .row-fluid -->
+			<div class="row-fluid">
+				<div class="span4">
+					<h4>Partners</h4>
+					<img src="img/freshbooks.png" width="150px">
+				</div> <!-- close .span4 -->
+				<div class="span4">
+					<h4>Referral & Invite Mechanisms</h4>
+					<p>Talent refers projects/members</p>
+				</div> <!-- close .span4 -->
+				<div class="span4">
+					<h4>Automated Engine</h4>
+					<p>Finds quality talent and projects elsewhere on the web and pulls in to our system</p>
+				</div> <!-- close .span4 -->
+			</div> <!-- close .row-fluid -->
+		</div> <!-- close #how-we-get-customers -->
+
+		<div id="team" class="slide">
+			<div class="centered">
+				<h3>Team</h3>
+			</div> <!-- close .centered -->
+			<div class="row-fluid">
+				<div class="span6">
+					<div class="row-fluid">
+						<div class="span4">
+							<img src="img/mikael.png" alt="Mikael Cho">
 						</div>
-					</div>
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="product" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper centered">
-					<h3 class="heading">Product</h3>
-					<div class="estimate contained">
-						<img src="img/ipad-estimate.png">
-						<p class="alternate-text">Submit Project from any device</p>
-					</div>
-					<div class="review">
-						<img src="img/ooomf-review.svg">
-					</div> <!-- close .review -->
-					<div class="profile contained">
-						<img src="img/ipad-profile.png">
-						<p class="alternate-text">The single best pro comes to you</p>
-					</div>
-					<p><span class="alternate-text">99% projects</span> match in less than 24 hours (3x faster than competition)</p>
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="this-year" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading">Traction</h3>
-						<div class="graph-1">
-							<img src="img/graph-1.svg">
-						</div> <!-- close .graph-1 -->
-						<p>&nbsp;</p>
-						<p><span class="emphasis">$650,000</span><br>
-							in projects in 4 months</p>
-						<p>&nbsp;</p>
-							<p><span class="emphasis">$300,000</span><br>
-							in the last month</p>
-						<p>&nbsp;</p>
-						<p>on pace for <br>
-						<span class="emphasis">$4MM</span><br>
-						in projects in the next 12 months</p>
-					</div> <!-- close .centered -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="quality-talent" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="left">
-						<p>Quality projects bring quality talent.</p>
-						<div class="companies">
-							<img src="img/companies-using-ooomf.png" alt="Companies using ooomf: Path, Apple, Google, and Mailbox">
-						</div> <!-- close .image-row -->
-					</div> <!-- close .left -->
-					<div class="right">
-						<div class="graph-2">
-							<img src="img/graph-2.svg">
-						</div> <!-- close .graph-2 -->
-					</div> <!-- close .right -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="market" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading">Market</h3>
-						<div class="graph-3">
-							<img src="img/graph-3.svg">
-						</div> <!-- close .graph-3 -->
-					</div> <!-- close .centered -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="business-model" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading">Business Model</h3>
-						<p><span class="alternate-text">15%</span> commission<br> on each project</p>
-						<div class="financials">
-							<a href="https://cloudup.com/chPuiOCkbyb" class="btn btn-danger" target="_blank">See our detailed metrics</a>
-						</div>
-					</div> <!-- close .centered -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="how-we-get-customers" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading">How we get customers</h3>
-					</div> <!-- close .centered -->
-					<div class="clearfix">
-						<div class="content">
-							<h4 class="heading">Content</h4>
-							<p><span class="alternate-text">Guest postings:</span> Fast Company, Inc., TechCrunch, TED</p>
-							<p><span class="alternate-text">Content marketing:</span> 20,000+ opt-in subscribers</p>
-							<p><span class="alternate-text">Search:</span> Targeted content aimed at high volume/low competition</p>
-						</div> <!-- close .content -->
-						<div class="tools">
-							<h4 class="heading">Tools</h4>
-							<p><a href="http://unsplash.com/" target="_blank">Unsplash:</a> 35,000+ opt-in subscribers</p>
-							<p><a href="http://lukechesser.github.io/Popular-UIs/" target="_blank">Popular Designs:</a> 4,000+ opt-in subscribers</p>
-							<p><a href="http://launchthisyear.com/" target="_blank">Launch This Year:</a> 15,000+ opt-in subscribers in 3 days</p>
-						</div> <!-- close .tools -->
+						<div class="span8">
+							<p class="weight-bold ">Mikael</p>
+							<p>Neuroscience degree; built subscriber-base of 40,000+ in 3 months for ooomf</p>
+						</div> <!-- close .span8 -->
 					</div> <!-- close .row-fluid -->
-					<div class="clearfix">
-						<div class="partners">
-							<h4 class="heading">Partners</h4>
-							<img src="img/freshbooks.png">
-						</div>
-						<div class="referral">
-							<h4 class="heading">Referral & Invite Mechanisms</h4>
-							<p>Talent refers projects/members</p>
-						</div>
-						<div class="automated">
-							<h4 class="heading">Automated Engine</h4>
-							<p>Finds quality talent and projects elsewhere on the web and pulls in to our system</p>
-						</div>
-					</div> <!-- close .clearfix -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="fortune-500" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<div class="contained">
-							<p>On track to add <br>
-								<span class="emphasis">50,000</span><br>
-								professionals.</p>
-							<p>More professionals than <span class="alternate-text">half the Fortune 500</span> employs, without paying a single salary.</p>
-						</div> <!-- close .contained -->
-					</div> <!-- close .centered -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="vision" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading">Vision</h3>
-						<p>The most trusted, collaborative place for <span class="alternate-text">anyone</span>, <span class="alternate-text">anywhere</span> to do exceptional work online.</p>
-					</div> <!-- close .centered -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="team" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-						<h3 class="heading">Team</h3>
-					</div> <!-- close .centered -->
-					<div class="clearfix">
-						<div class="split-2">
-							<div class="image">
-								<img src="img/mikael.png" alt="Mikael Cho">
-							</div>
-							<div class="text">
-								<p class="weight-bold alternate-text">Mikael</p>
-								<p>Neuroscience degree; built subscriber-base of 40,000+ in 3 months for ooomf</p>
-							</div>
-						</div> <!-- close .split-2 -->
-						<div class="split-2">
-							<div class="image">
-								<img src="img/steph.png" alt="Steph">
-							</div>
-							<div class="text">
-								<p class="weight-bold alternate-text">Steph</p>
-								<p>Actuary; Started first profitable online business at 16</p>
-							</div>
-						</div> <!-- close .split-2 -->
-					</div> <!-- close .clearfix -->
-					<div class="clearfix">
-						<div class="split-2">
-							<div class="image">
-								<img src="img/angus.png" alt="Angus Woodman">
-							</div>
-							<div class="text">
-								<p class="weight-bold alternate-text">Angus</p>
-								<p>Started 2 previous startups; graduated University at 19</p>
-							</div>
-						</div> <!-- close .split-2 -->
-						<div class="split-2">
-							<div class="image">
-								<img src="img/luke.png" alt="Luke">
-							</div>
-							<div class="text">
-								<p class="weight-bold alternate-text">Luke</p>
-								<p>Designer; built a product that reached 25,000+ downloads in a month</p>
-							</div>
-						</div> <!-- close .split-2 -->
-					</div> <!-- close .clearfix -->
-					<div class="investors-advisors">
-						<div class="centered">
-							<h3 class="heading">Investors & Advisors</h3>
-						</div> <!-- close .centered -->
-						<div class="clearfix">
-							<div class="split-3">
-								<div class="centered">
-									<img src="img/real.png">
-								</div>
-							</div>
-							<div class="split-3">
-								<div class="centered">
-									<img src="img/bdc.png">
-								</div> <!-- close .centered -->
-							</div>
-							<div class="split-3">
-								<div class="centered">
-									<img src="img/ff.png">
-								</div> <!-- close .centered -->
-							</div>
-						</div> <!-- close .clearfix -->
-						<div class="clearfix">
-							<div class="split-3">
-								<p>Real Ventures</p>
-							</div>
-							<div class="split-3">
-								<p>BDC</p>
-							</div>
-							<div class="split-3">
-								<p>FounderFuel</p>
-							</div>
-						</div> <!-- close .clearfix -->
-						<div class="adam centered">
-							<p class="title">Adam McNamara</p>
-							<ul class="unstyled">
-								<li><p>Head of Product at Shopify</p></li>
-								<li><p>Founded mobile development studio acquired by Shopify</p></li>
-							</ul>
-						</div> <!-- close .adam -->
-						<div class="angellist centered">
-							<p><a href="https://angel.co/ooomf" target="_blank">View on AngelList</a></p>
-						</div> <!-- close .angellist -->
-					</div> <!-- close .investors-advisors -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-		<section id="raising" class="auto">
-			<div class="table-wrapper">
-				<div class="cell-wrapper">
-					<div class="centered">
-					<h3 class="heading alternate-text">Raising $1MM</h3>
+				</div> <!-- close .span6 -->
+				<div class="span6">
+					<div class="row-fluid">
+						<div class="span4">
+							<img src="img/steph.png" alt="Steph">
+						</div> <!-- close .span4 -->
+						<div class="span8">
+							<p class="weight-bold">Steph</p>
+							<p>Actuary; Started first profitable online business at 16</p>
+						</div> <!-- close .span8 -->
+					</div> <!-- close .row-fluid -->
+				</div> <!-- close .span6 -->
+			</div> <!-- close .row-fluid -->
+			<div class="row-fluid">
+				<div class="span6">
+					<div class="row-fluid">
+						<div class="span4">
+							<img src="img/angus.png" alt="Angus Woodman">
+						</div> <!-- close .span4 -->
+						<div class="span8">
+							<p class="weight-bold ">Angus</p>
+							<p>Started 2 previous startups; graduated University at 19</p>
+						</div> <!-- close .span8 -->
+					</div> <!-- close .row-fluid -->
+				</div> <!-- close .span6 -->
+				<div class="span6">
+					<div class="row-fluid">
+						<div class="span4">
+							<img src="img/luke.png" alt="Luke">
+						</div> <!-- close .span4 -->
+						<div class="span8">
+							<p class="weight-bold ">Luke</p>
+							<p>Designer; built a product that reached 25,000+ downloads in a month</p>
+						</div> <!-- close .span8 -->
+					</div> <!-- close .row-fluid -->
+				</div> <!-- close .span6 -->
+			</div> <!-- close .row-fluid -->
+		</div> <!-- close #team -->
+		
+		<div id="investors" class="section slide">
+			<div class="centered">
+				<h3>Investors & Advisors</h3>
+			</div> <!-- close .centered -->
+			
+			<div class="row-fluid">
+				<div class="span4 centered padding-large">
+					<img src="img/real.png">
+				</div>
+
+				<div class="span4 centered" style="margin-top: 60px;">
+					<img src="img/bdc.png">
+				</div>
+				<div class="span4 centered padding-extra-large">
+					<img src="img/ff.png">
+				</div>
+			</div> <!-- close .row-fluid -->
+			<div class="row-fluid">
+				<div class="span4 centered">
+					<p>Real Ventures</p>
+				</div>
+				<div class="span4 centered">
+					<p>BDC</p>
+				</div>
+				<div class="span4 centered">
+					<p>FounderFuel</p>
+				</div>
+			</div> <!-- close .row-fluid -->
+			<div class="row-fluid adam" style="margin-top: 80px; margin-bottom: 80px;">
+				<div class="offset6 span6 text-right">
+					<p class="weight-bold">Adam McNamara</p>
 					<ul class="unstyled">
-						<li><p>Grow product and sales team</p></li>
-						<li><p>Fuel marketing and customer acquisition</p></li>
-						<li><p>Scale platform to all creative professionals</p></li>
-					</ul> <!-- close .unstyled -->
+						<li><p>Head of Product at Shopify</p></li>
+						<li><p>Founded mobile development studio acquired by Shopify</p></li>
+					</ul>
+				</div> <!-- close .span6 -->
+			</div> <!-- close .row-fluid -->
+			
+			<div class="centered">
+				<a href="https://angel.co/ooomf" target="_blank" class="btn btn-primary">View on AngelList</a>
+			</div> <!-- close .centered -->
+		</div> <!-- close .section -->
+		
+		<div id="raise" class="section slide centered">
+			<h3>Raising $1MM</h3>
+			<ul class="unstyled">
+				<li><p>Grow product and sales team</p></li>
+				<li><p>Fuel marketing and customer acquisition</p></li>
+				<li><p>Scale platform to all creative professionals</p></li>
+			</ul> <!-- close .unstyled -->
+		</div> <!-- close #raise -->
 
-					<div id="contact">
-						<div class="centered">
-							<div class="ooomf-logo">
-								<img src="img/ooomf-logo.svg">
-							</div> <!-- close .ooomf-logo -->
-						    <h2 class="alternate-text weight-bold">The Future of Work</h2>
-						    <div class="contact-information">
-						    	<p>Mikael Cho | Founder | <a href="mailto:mikael@ooomf.com">mikael@ooomf.com</a></p>
-						    	<p><a href="https://ooomf.com" target="_blank">ooomf.com</a></p>
-						    </div> <!-- close .contact-information -->
-						</div> <!-- close .centered -->
-					</div> <!-- close .contact-information -->
-				</div> <!-- close .cell-wrapper -->
-			</div> <!-- close .table-wrapper -->
-		</section>
-	</article>
+		<div class="slide centered" id="fortune-500">
+			<div class="contained">
+				<p>On track to add <br>
+					<span id="fortune-number" style="font-size: 90px; font-weight: 100; line-height: 80px;">0</span><br>
+					professionals.</p>
+				<p class="light" style="margin-top: 80px;">More professionals than <span class="weight-regular">half the Fortune 500</span> employs, without paying a single salary.</p>
+			</div> <!-- close .contained -->
+		</div> <!-- close .slide -->	
+
+		<div class="slide section centered">
+			<p>“This revolution is at least as big as the last one, and the last one changed everything.”</p>
+			<p class="weight-regular">— Seth Godin</p>
+		</div>
+
+		<div id="contact" class="section slide centered">
+			<div class="ooomf-logo">
+				<img src="img/ooomf-logo-gray.svg">
+			</div> <!-- close .ooomf-logo -->
+		    <h2 class=" weight-bold">The Future of Work</h2>
+		    <div style="margin-top: 80px;">
+		    	<p>Mikael Cho | Founder | <a href="mailto:mikael@ooomf.com">mikael@ooomf.com</a></p>
+		    	<p><a href="https://ooomf.com" target="_blank">ooomf.com</a></p>
+		    </div>
+		</div> <!-- close #contact -->
+	</div> <!-- close .container -->
 </div> <!-- close .snap-content -->
-<script>
-	(function ($) {
-		var snapper = new Snap({
-		 	element: document.getElementById('content'),
-		 	disable: 'right',
-			touchToDrag: false,
-			tapToClose: false
-		});
 
-		$('#control-button').click(function (event) {
-			if (snapper.state().state == "left") {
-		        snapper.close();
-		        $(this).removeClass('active');
-		    } else {
-		        snapper.open('left');
-		        $(this).addClass('active');
-		    }
-		    event.preventDefault();
-		});
-	})(jQuery);
-</script>
+<script src="js/source/presentation.js"></script>
 </body>
 </html>

@@ -1,27 +1,57 @@
-// ==========================================================================
-// *
-// * Slides
-// *
-// * styles for layout of slides
-// * 1. general slide layout
-// * 2. double slide height
-// * 3. alter table wrapper to restrict responsiveness
-// *
-// ==========================================================================
+@containerWidth: 900px;
 
-section {
-	background: @slideBackgroundColor;
-	width: 100%;
-	height: 100%;
-	min-height: 650px;
-	.box-sizing(border-box);
-	padding: 100px;
-	color: @white;
-	.border-radius(3px);
-	-webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
+.figure-label {
+	font-size: 14px;
+	line-height:18px;
+	color: @black3;
+
+	&-blue {
+		color: @blue;
+	}
+
+	&-gray {
+		color: @gray2;
+	}
 }
 
-.auto {
-	height: auto !important;
+.container {
+	width: @containerWidth;
+	margin: auto;
+}
+
+.bordered {
+	.box-shadow(~"0 0 4px rgba(0,0,0,.3)");
+}
+
+.section {
+	border-bottom: 1px solid @gray3;
+}
+
+#introduction {
+	.padding-set-vertical(200px);
+}
+
+.slide {
+	.box-sizing(border-box);
+	padding: 150px 50px;
+	background-color: #fff;
+}
+
+.contained {
+	width: 70%;
+	margin: auto;
+}
+
+#customers,
+#team,
+.adam {
+	p {
+		font-size: 18px;
+		line-height: 28px;
+	}
+
+	li {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 }

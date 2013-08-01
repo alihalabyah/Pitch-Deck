@@ -1,0 +1,9 @@
+{
+  "name": "jquery-animate-numbers",
+  "version": "0.0.0",
+  "commit": "37697a5bb9c371406a79395e7eb4f20718f19fdf",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:talmand/jquery-animate-numbers.git"
+  }
+}

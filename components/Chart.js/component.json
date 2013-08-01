@@ -1,0 +1,25 @@
+{
+  "name": "Chart.js",
+  "version": "0.0.0",
+  "description": "Simple HTML5 Charts using the canvas element",
+  "keywords": [
+    "charts"
+  ],
+  "homepage": "https://github.com/nnnick/Chart.js",
+  "author": {
+    "name": "nnnick"
+  },
+  "main": [
+    "Chart.min.js"
+  ],
+  "dependencies": {},
+  "gitHead": "58657d65cb139299786072df1692992bcf3610e9",
+  "readme": "Chart.js\n=======\n*Simple HTML5 Charts using the canvas element* [chartjs.org](http://www.chartjs.org)\n\nQuick FYI\n-------\nI'm currently working on a big refactor of the library into a more object oriented structure. \n\nIt'll have an extendable class structure for adding community developed chart types. By opening up components into Chart.js into extendable classes, it'll allow for much easier community driven library extensions rather than tacking on new features as required. The refactor will also feature a generisized version of the interaction layer introduced by Regaddi in his tooltips branch - https://github.com/nnnick/Chart.js/pull/51. On top of this, it'll include utility methods on each chart object, for updating, clearing and redrawing charts etc.\n\nI haven't quite got the bandwidth right now to be juggling both issues/requests in master while redesigning all of the core code in Chart.js. By focusing on the refactor, it'll get done WAY quicker.\n\nExtensibility will absolutely be at the core of the refactor, allowing for the development of complex extension modules, but also keeping a lightweight set of core code.\n\nHang tight - it'll be worth it. \n\nPS. If you're interested in reviewing some code or trying out writing extensions, shoot me an email.\n\nDocumentation\n-------\nYou can find documentation at [chartjs.org/docs](http://www.chartjs.org/docs).\n\nLicense\n-------\nChart.js was taken down on the 19th March. It is now back online for good and IS available under MIT license.\n\nChart.js is available under the [MIT license] (http://opensource.org/licenses/MIT).\n",
+  "readmeFilename": "readme.md",
+  "_id": "Chart.js@0.2.0",
+  "commit": "58657d65cb139299786072df1692992bcf3610e9",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nnnick/Chart.js.git"
+  }
+}

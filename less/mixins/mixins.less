@@ -1,42 +1,34 @@
-.font-primary() {
-  font-family: "proxima-nova", sans-serif;
-}
-
-.font-secondary() {
-  font-family: "brandon-grotesque", sans-serif; 
-}
-
 // ==========================================================================
 // * # Padding mixins
 // ==========================================================================
 
-.padding-set-all(@top: 10px, @right: @top, @bottom: @top, @left: @top) {
-	padding: @top @right @bottom @left;
+.padding-set-all (@padding: 10px) {
+	padding: @padding;
 }
 
-.padding-set-vertical(@top: 10px, @bottom: @top) {
+.padding-set-vertical (@padding: 10px) {
+	padding-top: @padding;
+	padding-bottom: @padding;
+}
+
+.padding-set-horizontal (@padding: 10px) {
+	padding-left: @padding;
+	padding-right: @padding;
+}
+
+.padding-set-top (@top: 10px) {
 	padding-top: @top;
-	padding-bottom: @bottom;
 }
 
-.padding-set-horizontal(@left: 10px, @right: @left) {
-	padding-left: @left;
-	padding-right: @right;
-}
-
-.padding-set-top(@top: 10px) {
-	padding-top: @top;
-}
-
-.padding-set-bottom(@bottom: 10px) {
+.padding-set-bottom (@bottom: 10px) {
 	padding-top: @bottom;
 }
 
-.padding-set-right(@right: 10px) {
+.padding-set-right (@right: 10px) {
 	padding-top: @right;
 }
 
-.padding-set-left(@left: 10px) {
+.padding-set-left (@left: 10px) {
 	padding-top: @left;
 }
 
@@ -44,33 +36,32 @@
 // * # Margin mixins
 // ==========================================================================
 
-.margin-set-all(@top: 10px, @right: @top, @bottom: @top, @left: @top) {
-	margin: @top @right @bottom @left;
+.margin-set-all (@margin: 10px) {
+	margin: @margin;
 }
 
-.margin-set-vertical(@top: 10px, @bottom: @top) {
+.margin-set-vertical (@margin: 10px) {
+	margin-top: @margin;
+	margin-bottom: @margin;
+}
+
+.margin-set-horizontal (@margin: 10px) {
+	margin-left: @margin;
+	margin-right: @margin;
+}
+
+.margin-set-top (@top: 10px) {
 	margin-top: @top;
-	margin-bottom: @bottom;
 }
 
-.margin-set-horizontal(@left: 10px, @right: @left) {
-	margin-left: @left;
-	margin-right: @right;
-}
-
-.margin-set-top(@top: 10px) {
-	margin-top: @top;
-}
-
-.margin-set-bottom(@bottom: 10px) {
+.margin-set-bottom (@bottom: 10px) {
 	margin-top: @bottom;
 }
 
-.margin-set-right(@right: 10px) {
+.margin-set-right (@right: 10px) {
 	margin-top: @right;
 }
 
-.margin-set-left(@left: 10px) {
+.margin-set-left (@left: 10px) {
 	margin-top: @left;
 }
-
