@@ -32,8 +32,10 @@ module.exports = function(grunt) {
         src: [
           'components/jquery/jquery.js',
           'components/Chart.js/Chart.js',
-          'components/jquery.transit/jquery.transit.js',
-          'components/bootstrap/dist/js/bootstrap.js'
+          'components/jquery-animate-numbers/jquery.animateNumbers.js',
+          'components/jquery-scrollspy/jquery-scrollspy.js',
+          'components/jquery.typer.js/src/jquery.typer.js',
+          'js/source/snap.js'
         ],
         dest: 'js/dist/main.js'
       }

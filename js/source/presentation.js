@@ -19,7 +19,7 @@ jQuery(function () {
 			Presentation.initializeSnapperSidebar();
 			Presentation.initializeScrollSpy();
 			Presentation.initializeTypers();
-			
+
 			Presentation.initializeAverageBudgetChart();
 		},
 
@@ -50,36 +50,47 @@ jQuery(function () {
 				{
 					selector: $('#opportunity'),
 					delay: 250,
-					offset: 100,
+					offset: 50,
 					onEnter: Presentation.initializeEmploymentChart,
 					onLeave: null
 				},
 				{
 					selector: $('#traction'),
 					onEnter: Presentation.initializeTractionChart,
-					delay: 1000,
-					offset: 500,
+					delay: 500,
+					offset: 2800,
 					onLeave: null
 				},
 				{
 					selector: $('#js-traction-numbers'),
 					onEnter: Presentation.initializeTractionNumbers,
 					delay: 500,
-					offset: 500,
+					offset: 2500,
 					onLeave: null
 				},
 				{
-					selector: $('#fortune-500'),
+					selector: $('#fortune-number'),
 					onEnter: Presentation.initializeFortune500Numbers,
-					delay: 250,
-					offset: 50,
+					delay: 500,
+					offset: 3300,
+					onLeave: null
+				},
+				{
+					selector: $('#no-noise'),
+					onEnter: Presentation.initializeProductSection,
+					delay: 1000,
+					offset: 2000,
 					onLeave: null
 				},
 			];
 
 			$.each(items, function (index, element) {
 				var $element = $(element.selector);
-				var position = $element.position();
+				var position = $element.offset();
+
+				console.log(element.selector);
+				console.log('position:' + position.top);
+
 				$element.scrollspy({
 					container: c.snapperElement,
 					min: position.top + element.offset,
@@ -99,7 +110,15 @@ jQuery(function () {
 		},
 
 		initializeTypers: function () {
-			$('[data-typer-targets]').typer();
+			var options;
+
+			options = {
+				clearDelay: 250,
+				typeSpeed: 50,
+				typeInterval: 500
+			};
+
+			$('[data-typer-targets]').typer(options);
 		},
 
 		initializeEmploymentChart: function () {
@@ -110,21 +129,21 @@ jQuery(function () {
 			ctx = c.employmentChart.get(0).getContext("2d");
 
 			data = {
-				labels : ["2011","2020"],
+				labels : ["2012", "2014", "2016", "2018", "2020"],
 				datasets : [
 					{
-						fillColor : "rgba(200,200,200,0.5)",
+						fillColor : "rgba(200,200,200,0)",
 						strokeColor : "rgba(200,200,200,1)",
 						pointColor : "rgba(200,200,200,1)",
 						pointStrokeColor : "#fff",
-						data : [60, 58]
+						data : [60, 59.5, 59, 58.5, 58]
 					},
 					{
-						fillColor : "rgba(62,177,226,.5)",
+						fillColor : "rgba(62,177,226,0)",
 						strokeColor : "rgba(62,177,226,1)",
 						pointColor : "rgba(62,177,226,1)",
 						pointStrokeColor : "#fff",
-						data : [16,70]
+						data : [16, 20, 30, 45, 70]
 					}
 				]
 			};
@@ -138,10 +157,11 @@ jQuery(function () {
 				scaleLineColor : "rgba(0,0,0,.2)",
 				scaleLabel : "<%=value%> MM",
 				animationSteps : 120,
-				pointDotRadius : 5,
-				pointDotStrokeWidth : 2,
-				datasetStroke : true,
-				datasetStrokeWidth : 2,
+				pointDotRadius : 0,
+				pointDotStrokeWidth : 0,
+				datasetStroke : false,
+				bezierCurve : false,
+				datasetStrokeWidth : 3,
 				scaleFontFamily : "'Helvetica Neue'",
 				scaleFontStyle : "bold",
 				scaleFontColor : "#999",	
@@ -152,6 +172,8 @@ jQuery(function () {
 			new Chart(ctx).Line(data, options);
 
 			c.emplomentChartFigures.fadeIn('slow');
+
+			console.log('Fired employmentChart');
 		},
 
 		initializeTractionChart: function () {
@@ -196,11 +218,15 @@ jQuery(function () {
 			}
 
 			new Chart(ctx).Line(data, options);
+
+			console.log('Fired tractionChart');
 		},
 
 		initializeTractionNumbers: function () {
 			$('#revenue-in-4-months').animateNumbers(650000, true, 3000);
 			$('#growth-rate').animateNumbers(27, true, 3000);
+
+			console.log('Fired traction numbers');
 		},
 
 		initializeAverageBudgetChart: function () {
@@ -254,6 +280,23 @@ jQuery(function () {
 
 		initializeFortune500Numbers: function () {
 			$('#fortune-number').animateNumbers(50000, true, 3000);
+
+			console.log('Fired fortune 500 numbers');
+		},
+
+		initializeProductSection: function () {
+			var $images = $('#no-noise .js-image');
+
+			$images.eq(0).fadeIn();
+
+			console.log('Fired no noise image');
+
+			setTimeout(function () {
+				$images.eq(1).fadeIn();
+				setTimeout(function () {
+					$images.eq(2).fadeIn();
+				}, 1000);
+			}, 1000);
 		}
 	}
 

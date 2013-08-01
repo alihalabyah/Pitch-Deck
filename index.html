@@ -7,12 +7,7 @@
 	<!-- stylesheets -->
 	<link rel="stylesheet" href="css/presentation.css">
 
-	<script src="components/jquery/jquery.js"></script>
-	<script src="components/jquery.typer.js/src/jquery.typer.js"></script>
-	<script src="components/jquery-animate-numbers/jquery.animateNumbers.js"></script>
-	<script src="components/jquery-scrollspy/jquery-scrollspy.js"></script>
-	<script src="js/source/snap.js"></script>
-	<script src="components/Chart.js/Chart.js"></script>
+	<script src="js/dist/main.min.js"></script>
 
 	<link rel="icon" type="image/x-icon" href="favicon.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
@@ -37,7 +32,7 @@
         	<li><a href="#vision">Vision</a></li>
         	<li><a href="#customers">Customers</a></li>
         	<li><a href="#team">Team & Investors</a></li>
-        	<li><a href="#raising">Raise</a></li>
+        	<li><a href="#raise">Raise</a></li>
         </ul>
     </div>
 </div>
@@ -47,9 +42,9 @@
 			<div class="table-wrapper">
 				<div class="cell-wrapper">
 					<div class="ooomf-logo">
-						<img src="img/ooomf-logo-gray.svg">
+						<img src="img/ooomf-logo-gray.svg" width="300px" height="150px">
 					</div> <!-- close .ooomf-logo -->
-				    <h2>The Future of Work</h2>
+				    <h2 class="light">The Future of Work</h2>
 				</div> <!-- close .cell-wrapper -->
 			</div> <!-- close .table-wrapper -->
 		</div> <!-- close #introduction -->
@@ -60,31 +55,31 @@
 			<span class="weight-regular">economic movement</span><br>
 			since the Industrial Revolution.</p>
 			<div class="relative">
-				<canvas id="shift-in-employment" style="margin-top: 100px" width="600" height="300"></canvas>
-				<h6 class="figure-label figure-label-blue js-figure" style="display: none; position: absolute; top: 114px; right: -8px;"># of independent<br> professionals</h6>
-				<h6 class="figure-label figure-label-gray js-figure" style="display: none; position: absolute; top: 167px; right: 17px;"># of full-time<br> professionals</h6>
+				<canvas id="shift-in-employment" style="margin-top: 100px" width="450" height="300"></canvas>
+				<h6 class="figure-label figure-label-blue js-figure" style="display: none; position: absolute; top: 114px; right: 67px;"># of independent<br> professionals</h6>
+				<h6 class="figure-label figure-label-gray js-figure" style="display: none; position: absolute; top: 167px; right: 92px;"># of full-time<br> professionals</h6>
 			</div> <!-- close .relative -->
 		</div>
 
 		<div class="slide centered">
-			<p>Work can now be done <span data-typer-targets="from anywhere, at anytime, in any place">in any space</span>.</p>
+			<p>Work can now be done <span data-typer-targets="from anywhere, in any space, at anytime, in any place"></span>.</p>
 		</div> <!-- close .slide -->
 
 		<div class="slide centered">
 			<p>But more work online means more noise.</p>
-			<img src="img/world-noise.jpg">
+			<img src="img/world-noise.jpg" width="800px" height="533px">
 		</div> <!-- close .slide -->
 
 		<div class="slide centered">
 			<p>Today, lowest price wins.</p>
 			<div class="centered">
-				<img src="img/odesk.jpg">
+				<img src="img/odesk.jpg" width="311px" height="311px">
 			</div>
 		</div> <!-- close .slide -->
 
 		<div class="slide centered section">
 			<p class="weight-regular">Average is over.</p>
-			<img src="img/average-is-over.jpg">
+			<img src="img/average-is-over.jpg" width="361px" height="347px">
 			<p>Current systems fail to attract top talent.</p>
 			<p>Smart employers are looking elsewhere.</p>
 		</div> <!-- close .slide -->
@@ -103,22 +98,52 @@
 			<div class="centered">
 				<h3>Product</h3>
 			</div> <!-- close .centered -->
-			<div class="row-fluid" style="margin-bottom: 100px">
-				<div class="span4">
-						<p>Jeff needs an iPhone developer</p>
-				</div> <!-- close .span4 -->
-				<div class="span8 centered">
-					<img src="img/ipad-estimate.png">
-					<p class="">Submit Project from any device</p>
+			<div class="centered" style="margin-bottom: 100px">
+
+				<p>Submit project from any device</p>
+				<img src="img/estimate-1.png" width="800px" height="557px">
 				
+				<div class="relative">
+					<img src="img/ooomf-review.png" width="255px" height="500px">
+					<p style="position: absolute; top: 270px; left: 350px;">Review</p>
+				</div><!-- close .relative -->
+
 				
-					<img src="img/ooomf-review.svg">
-				
-				
-					<img src="img/ipad-profile.png">
-					<p class="">The single best pro comes to you</p>
-				</div> <!-- close .span8 -->
-			</div> <!-- close .row-fluid -->
+				<p>The single best pro comes to you</p>
+				<img src="img/estimate-2.png" width="800px" height="557px">
+			</div>
+
+			<div id="no-noise" class="centered" style="margin-top: 150px; margin-bottom: 150px;">
+				<div class="row-fluid">
+					<div class="span4">
+						<div style="width: 255px; height: 255px;">
+							<img src="img/no-noise.png" display="none" class="js-image" >
+						</div>
+					</div> <!-- close .span4 -->
+					<div class="span4">
+						<div width="255px" height="255px">
+							<img src="img/no-spam.png" style="display: none" class="js-image" width="255px" height="255px">
+						</div>
+					</div> <!-- close .span4 -->
+					<div class="span4">
+						<div width="255px" height="255px">
+							<img src="img/no-price-wars.png" style="display: none" class="js-image" width="255px" height="255px">
+						</div>
+					</div> <!-- close .span4 -->
+				</div> <!-- close .row-fluid -->
+				<div class="row-fluid">
+					<div class="span4">
+						<p>No noise</p>
+					</div> <!-- close .span4 -->
+					<div class="span4">
+						<p>No spam</p>
+					</div> <!-- close .span4 -->
+					<div class="span4">
+						<p>No price wars</p>
+					</div> <!-- close .span4 -->
+				</div> <!-- close .row-fluid -->
+
+			</div> <!-- close .centered -->
 
 			<div class="centered" style="margin-top: 150px; margin-bottom: 50px;">
 				<p><span style="font-size: 180px; font-weight: 100;">99%</span><br>
@@ -223,7 +248,7 @@
 				<h3>Team</h3>
 			</div> <!-- close .centered -->
 			<div class="row-fluid">
-				<div class="span6">
+				<div class="span6" style="margin-bottom: 60px;">
 					<div class="row-fluid">
 						<div class="span4">
 							<img src="img/mikael.png" alt="Mikael Cho">
@@ -342,7 +367,7 @@
 			<div class="ooomf-logo">
 				<img src="img/ooomf-logo-gray.svg">
 			</div> <!-- close .ooomf-logo -->
-		    <h2 class=" weight-bold">The Future of Work</h2>
+		    <h2 class="light">The Future of Work</h2>
 		    <div style="margin-top: 80px;">
 		    	<p>Mikael Cho | Founder | <a href="mailto:mikael@ooomf.com">mikael@ooomf.com</a></p>
 		    	<p><a href="https://ooomf.com" target="_blank">ooomf.com</a></p>
