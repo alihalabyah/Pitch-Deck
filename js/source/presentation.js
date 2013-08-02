@@ -88,9 +88,6 @@ jQuery(function () {
 				var $element = $(element.selector);
 				var position = $element.offset();
 
-				console.log(element.selector);
-				console.log('position:' + position.top);
-
 				$element.scrollspy({
 					container: c.snapperElement,
 					min: position.top + element.offset,
@@ -110,15 +107,36 @@ jQuery(function () {
 		},
 
 		initializeTypers: function () {
-			var options;
+			var sentences,
+				count,
+				max,
+				$type,
+				loop;
 
-			options = {
-				clearDelay: 250,
-				typeSpeed: 50,
-				typeInterval: 500
-			};
+			sentences = [
+				"from anywhere",
+				"in any space",
+				"at anytime",
+				"in any place"
+			];
 
-			$('[data-typer-targets]').typer(options);
+			count = 0;
+			max = sentences.length - 1;
+
+			$type = $('#type');
+
+			loop = function () {
+				setTimeout(function () {
+					if (count > max) {
+						count = 0;
+					}
+					$type.text(sentences[count]);
+					count++;
+					loop();
+				}, 2000);
+			}
+
+			loop();
 		},
 
 		initializeEmploymentChart: function () {
@@ -172,8 +190,6 @@ jQuery(function () {
 			new Chart(ctx).Line(data, options);
 
 			c.emplomentChartFigures.fadeIn('slow');
-
-			console.log('Fired employmentChart');
 		},
 
 		initializeTractionChart: function () {
@@ -218,15 +234,11 @@ jQuery(function () {
 			}
 
 			new Chart(ctx).Line(data, options);
-
-			console.log('Fired tractionChart');
 		},
 
 		initializeTractionNumbers: function () {
 			$('#revenue-in-4-months').animateNumbers(650000, true, 3000);
 			$('#growth-rate').animateNumbers(27, true, 3000);
-
-			console.log('Fired traction numbers');
 		},
 
 		initializeAverageBudgetChart: function () {
@@ -280,16 +292,12 @@ jQuery(function () {
 
 		initializeFortune500Numbers: function () {
 			$('#fortune-number').animateNumbers(50000, true, 3000);
-
-			console.log('Fired fortune 500 numbers');
 		},
 
 		initializeProductSection: function () {
 			var $images = $('#no-noise .js-image');
 
 			$images.eq(0).fadeIn();
-
-			console.log('Fired no noise image');
 
 			setTimeout(function () {
 				$images.eq(1).fadeIn();
