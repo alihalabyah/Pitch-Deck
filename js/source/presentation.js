@@ -16,11 +16,28 @@ jQuery(function () {
 		ready: function () {
 			c = Presentation.cache;
 			d = Presentation.defaults;
-			Presentation.initializeSnapperSidebar();
-			Presentation.initializeScrollSpy();
-			Presentation.initializeTypers();
 
+			Presentation.initializeSnapperSidebar();
 			Presentation.initializeAverageBudgetChart();
+
+			if (Modernizr.touch) {
+				Presentation.mobileReady();
+			} else {
+				Presentation.desktopReady();
+			}
+		},
+
+		desktopReady: function () {
+			Presentation.initializeTypers();
+			Presentation.initializeScrollSpy();
+		},
+
+		mobileReady: function () {
+			Presentation.initializeEmploymentChart();
+			Presentation.initializeTractionChart();
+			Presentation.initializeTractionNumbers();
+			Presentation.initializeFortune500Numbers();
+			Presentation.initializeProductSection();
 		},
 
 		initializeSnapperSidebar: function () {
@@ -306,7 +323,7 @@ jQuery(function () {
 				}, 1000);
 			}, 1000);
 		}
-	}
+	};
 
 	Presentation.ready();
 });
