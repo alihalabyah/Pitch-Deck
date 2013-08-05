@@ -254,8 +254,17 @@ jQuery(function () {
 		},
 
 		initializeTractionNumbers: function () {
-			$('#revenue-in-4-months').animateNumbers(650000, true, 3000);
-			$('#growth-rate').animateNumbers(27, true, 3000);
+			var $revenue,
+				$growthRate;
+
+			$revenue = $('#revenue-in-4-months');
+			$growthRate = $('#growth-rate');
+
+			$revenue.text('0');
+			$growthRate.text('0');
+
+			$revenue.animateNumbers(650000, true, 3000);
+			$growthRate.animateNumbers(27, true, 3000);
 		},
 
 		initializeAverageBudgetChart: function () {
@@ -308,7 +317,11 @@ jQuery(function () {
 		},
 
 		initializeFortune500Numbers: function () {
-			$('#fortune-number').animateNumbers(50000, true, 3000);
+			var $fortuneNumber;
+
+			$fortuneNumber = $('#fortune-number');
+			$fortuneNumber.text('0');
+			$fortuneNumber.animateNumbers(50000, true, 3000);
 		},
 
 		initializeProductSection: function () {
