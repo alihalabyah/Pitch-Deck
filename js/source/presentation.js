@@ -36,7 +36,6 @@ jQuery(function () {
 			Presentation.initializeEmploymentChart();
 			Presentation.initializeTractionChart();
 			Presentation.initializeTractionNumbers();
-			Presentation.initializeFortune500Numbers();
 			Presentation.initializeProductSection();
 		},
 
@@ -314,14 +313,6 @@ jQuery(function () {
 			};
 
 			new Chart(ctx).Bar(data,options);
-		},
-
-		initializeFortune500Numbers: function () {
-			var $fortuneNumber;
-
-			$fortuneNumber = $('#fortune-number');
-			$fortuneNumber.text('0');
-			$fortuneNumber.animateNumbers(50000, true, 3000);
 		},
 
 		initializeProductSection: function () {
