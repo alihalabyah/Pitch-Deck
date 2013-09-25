@@ -85,13 +85,6 @@ jQuery(function () {
 					onLeave: null
 				},
 				{
-					selector: $('#fortune-number'),
-					onEnter: Presentation.initializeFortune500Numbers,
-					delay: 500,
-					offset: 3300,
-					onLeave: null
-				},
-				{
 					selector: $('#no-noise'),
 					onEnter: Presentation.initializeProductSection,
 					delay: 1000,
